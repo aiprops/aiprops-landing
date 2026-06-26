@@ -3,131 +3,1490 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIPRops | Sistemas Inteligentes para Negocios</title>
-  <meta name="description" content="AIPRops diseña sistemas inteligentes para empresas. Coordinación de llamadas estratégicas para mejorar procesos y operaciones." />
-  <link rel="stylesheet" href="styles.css" />
+
+  <title>AIPRops | Sistemas, Automatización y Soluciones Digitales para Negocios</title>
+
+  <meta
+    name="description"
+    content="AIPRops desarrolla sistemas inteligentes, automatización de procesos, aplicaciones, páginas web, dashboards y soluciones digitales para empresas en Puerto Rico."
+  />
+
+  <style>
+    :root {
+      --navy: #050f1f;
+      --navy-2: #071a31;
+      --navy-3: #0a2745;
+      --cyan: #0fb9d8;
+      --cyan-2: #23d5ee;
+      --orange: #ff6b00;
+      --orange-2: #ff8a1c;
+      --white: #ffffff;
+      --text: #d7e6f7;
+      --muted: #93a9c4;
+      --border: rgba(255, 255, 255, 0.13);
+      --soft: rgba(255, 255, 255, 0.06);
+      --shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+      --radius: 26px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(15, 185, 216, 0.22), transparent 32%),
+        radial-gradient(circle at 88% 12%, rgba(255, 107, 0, 0.18), transparent 28%),
+        linear-gradient(180deg, #050f1f 0%, #071526 46%, #020713 100%);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(35, 213, 238, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(35, 213, 238, 0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black, transparent 86%);
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 38px));
+      margin: 0 auto;
+    }
+
+    .accent {
+      color: var(--cyan);
+    }
+
+    .orange {
+      color: var(--orange);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      transition: 0.24s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--orange), var(--orange-2));
+      color: white;
+      box-shadow: 0 20px 50px rgba(255, 107, 0, 0.34);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 70px rgba(255, 107, 0, 0.46);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(35, 213, 238, 0.36);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      background: rgba(15, 185, 216, 0.13);
+      border-color: rgba(35, 213, 238, 0.7);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(35, 213, 238, 0.34);
+      background: rgba(15, 185, 216, 0.08);
+      color: #e7fbff;
+      font-size: 14px;
+      font-weight: 850;
+      box-shadow: 0 0 35px rgba(15, 185, 216, 0.12);
+    }
+
+    .badge span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 14px var(--orange);
+    }
+
+    /* HEADER */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 15, 31, 0.78);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      width: 158px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(15, 185, 216, 0.28));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      top: 88px;
+      left: 18px;
+      right: 18px;
+      z-index: 99;
+      padding: 16px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: rgba(5, 15, 31, 0.96);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+    }
+
+    .mobile-panel.active {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mobile-panel a {
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+      font-weight: 850;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      padding: 82px 0 62px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.03fr 0.97fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin-top: 22px;
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 0.95;
+      letter-spacing: -3.5px;
+      text-transform: uppercase;
+      font-weight: 1000;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero p {
+      margin-top: 24px;
+      color: var(--text);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.65;
+      max-width: 680px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-stats {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 720px;
+    }
+
+    .stat {
+      padding: 17px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid var(--border);
+    }
+
+    .stat b {
+      display: block;
+      font-size: 24px;
+      color: white;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .visual {
+      position: relative;
+      min-height: 570px;
+    }
+
+    .dashboard-card {
+      position: absolute;
+      top: 14px;
+      right: 0;
+      width: min(100%, 610px);
+      padding: 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(35, 213, 238, 0.28);
+      background:
+        radial-gradient(circle at top left, rgba(15, 185, 216, 0.16), transparent 35%),
+        linear-gradient(180deg, rgba(11, 39, 69, 0.96), rgba(3, 12, 25, 0.98));
+      box-shadow: var(--shadow), 0 0 80px rgba(15, 185, 216, 0.12);
+      transform: perspective(1200px) rotateY(-7deg) rotateX(3deg);
+    }
+
+    .dash-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .dash-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 950;
+    }
+
+    .dash-logo img {
+      width: 86px;
+      height: auto;
+    }
+
+    .dash-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dash-dots i {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--cyan);
+    }
+
+    .dash-dots i:nth-child(2) {
+      background: var(--orange);
+    }
+
+    .dash-dots i:nth-child(3) {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .kpi {
+      padding: 14px;
+      border-radius: 18px;
+      min-height: 90px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .kpi small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .kpi b {
+      display: block;
+      margin-top: 8px;
+      font-size: 22px;
+    }
+
+    .kpi em {
+      display: block;
+      margin-top: 5px;
+      font-size: 11px;
+      color: #4ade80;
+      font-style: normal;
+    }
+
+    .dash-main {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 12px;
+    }
+
+    .panel {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      min-height: 180px;
+      overflow: hidden;
+    }
+
+    .panel h4 {
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+
+    .chart {
+      height: 118px;
+      border-radius: 15px;
+      background:
+        linear-gradient(to top, rgba(15, 185, 216, 0.12), transparent),
+        repeating-linear-gradient(to top, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 24px);
+      position: relative;
+    }
+
+    .chart svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .flow-item {
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(15, 185, 216, 0.1);
+      border: 1px solid rgba(35, 213, 238, 0.2);
+      color: #dffbff;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .phone-card {
+      position: absolute;
+      right: 28px;
+      bottom: 16px;
+      width: 215px;
+      padding: 12px;
+      border-radius: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #071829;
+      box-shadow: var(--shadow);
+      transform: rotate(5deg);
+    }
+
+    .phone-screen {
+      border-radius: 24px;
+      min-height: 370px;
+      padding: 18px;
+      background:
+        radial-gradient(circle at top, rgba(15, 185, 216, 0.28), transparent 30%),
+        linear-gradient(180deg, #0a2745, #040b17);
+    }
+
+    .phone-screen small {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .phone-screen h3 {
+      margin-top: 10px;
+      font-size: 30px;
+      letter-spacing: -1px;
+    }
+
+    .phone-chart {
+      height: 82px;
+      margin-top: 18px;
+      border-radius: 16px;
+      background:
+        linear-gradient(to top, rgba(15, 185, 216, 0.15), transparent),
+        repeating-linear-gradient(to top, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 22px);
+    }
+
+    .floating-chip {
+      position: absolute;
+      left: -6px;
+      bottom: 88px;
+      padding: 15px 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-2));
+      box-shadow: 0 20px 55px rgba(255, 107, 0, 0.34);
+      font-weight: 950;
+      z-index: 4;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 86px 0;
+      position: relative;
+    }
+
+    .section-head {
+      max-width: 840px;
+      margin-bottom: 38px;
+    }
+
+    .section-head.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .kicker {
+      color: var(--orange);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 1000;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1;
+      letter-spacing: -2px;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    .section-sub {
+      margin-top: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 282px;
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      overflow: hidden;
+      transition: 0.24s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: radial-gradient(circle at top right, rgba(15, 185, 216, 0.18), transparent 42%);
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(35, 213, 238, 0.5);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    .icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: rgba(15, 185, 216, 0.12);
+      border: 1px solid rgba(35, 213, 238, 0.24);
+      color: var(--cyan-2);
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .card:nth-child(even) .icon {
+      background: rgba(255, 107, 0, 0.12);
+      border-color: rgba(255, 107, 0, 0.24);
+      color: var(--orange);
+    }
+
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+      letter-spacing: -0.7px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    .card ul {
+      margin-top: 18px;
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      color: #dcecff;
+      font-size: 14px;
+    }
+
+    .card li::before {
+      content: "✓";
+      margin-right: 8px;
+      color: var(--cyan);
+      font-weight: 1000;
+    }
+
+    .industries {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01));
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .industry {
+      min-height: 190px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .industry::after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      right: -50px;
+      bottom: -55px;
+      background: rgba(255, 107, 0, 0.12);
+      filter: blur(10px);
+    }
+
+    .industry b {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .industry p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .steps {
+      display: grid;
+      gap: 15px;
+      margin-top: 26px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.052);
+      border: 1px solid var(--border);
+    }
+
+    .step-number {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(15, 185, 216, 0.24), rgba(255, 107, 0, 0.2));
+      font-size: 22px;
+      font-weight: 1000;
+    }
+
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .big-card {
+      padding: 32px;
+      border-radius: 34px;
+      border: 1px solid rgba(35, 213, 238, 0.24);
+      background:
+        radial-gradient(circle at top left, rgba(15, 185, 216, 0.18), transparent 38%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      box-shadow: var(--shadow);
+    }
+
+    .big-card h3 {
+      margin-top: 20px;
+      font-size: 32px;
+      line-height: 1.08;
+      letter-spacing: -1.2px;
+    }
+
+    .big-card p {
+      margin-top: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .benefit-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .benefit {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .benefit b {
+      display: block;
+      color: var(--cyan);
+      font-size: 25px;
+    }
+
+    .benefit span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    /* CALENDLY */
+
+    .agenda-section {
+      padding-top: 90px;
+    }
+
+    .agenda-box {
+      padding: 42px;
+      border-radius: 36px;
+      border: 1px solid rgba(35, 213, 238, 0.24);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(15, 185, 216, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 0%, rgba(255, 107, 0, 0.16), transparent 30%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      box-shadow: var(--shadow);
+    }
+
+    .agenda-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .agenda-top p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 12px;
+      max-width: 740px;
+    }
+
+    .calendly-shell {
+      overflow: hidden;
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: white;
+    }
+
+    .calendly-inline-widget {
+      min-width: 320px;
+      height: 760px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo-img {
+      width: 132px;
+      height: auto;
+      filter: drop-shadow(0 0 14px rgba(255, 107, 0, 0.2));
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 150;
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #17d66c, #0eb85b);
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 18px 45px rgba(23, 214, 108, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      transition: 0.22s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-5px) scale(1.04);
+    }
+
+    @media (max-width: 980px) {
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-grid,
+      .process-grid,
+      .agenda-top {
+        grid-template-columns: 1fr;
+      }
+
+      .visual {
+        min-height: 630px;
+      }
+
+      .dashboard-card {
+        width: 100%;
+        transform: none;
+      }
+
+      .phone-card {
+        right: 8px;
+        bottom: 0;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .logo-img {
+        width: 126px;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-stats,
+      .services-grid,
+      .industry-grid,
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cta .btn,
+      .agenda-top .btn {
+        width: 100%;
+      }
+
+      .visual {
+        min-height: auto;
+      }
+
+      .dashboard-card {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+        padding: 12px;
+      }
+
+      .kpis {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .dash-main {
+        grid-template-columns: 1fr;
+      }
+
+      .phone-card {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 22px auto 0;
+        transform: none;
+      }
+
+      .floating-chip {
+        display: none;
+      }
+
+      .agenda-box {
+        padding: 24px 16px;
+      }
+
+      .calendly-inline-widget {
+        height: 720px;
+      }
+
+      .floating-whatsapp {
+        width: 58px;
+        height: 58px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="header">
-    <img src="assets/logo.png" alt="AIPRops Logo" class="logo">
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="AIPRops Inicio">
+        <img src="assets/logo.png" alt="AIPRops Logo" class="logo-img">
+      </a>
 
-    <a
-      href="https://wa.me/17874788885"
-      target="_blank"
-      class="btn-whatsapp"
-    >
-      WhatsApp
-    </a>
+      <nav class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#agenda">Agenda</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="https://wa.me/17874788885" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+        <a class="btn btn-primary" href="#agenda">
+          Agendar evaluación
+        </a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="#servicios">Servicios</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#agenda">Agendar evaluación</a>
+      <a href="https://wa.me/17874788885" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>
-        Creamos sistemas inteligentes que se adpatan a tu negocio<br>
-        <span>No al revés.</span>
-      </h1>
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="badge">
+            <span></span>
+            Tecnología, automatización y sistemas para empresas
+          </div>
+
+          <h1>
+            Soluciones
+            <span class="accent">digitales</span>
+            <span class="orange">para negocios</span>
+          </h1>
+
+          <p>
+            Creamos sistemas inteligentes que se adaptan a tu negocio, no al revés.
+            Ayudamos a empresas a salir del revolú operativo, eliminar procesos manuales
+            y operar con más control, claridad y eficiencia real.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#agenda">
+              Agendar evaluación →
+            </a>
+            <a class="btn btn-secondary" href="https://wa.me/17874788885" target="_blank" rel="noopener">
+              Hablar por WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <b>Control</b>
+              <span>Procesos centralizados, organizados y medibles.</span>
+            </div>
+
+            <div class="stat">
+              <b>Eficiencia</b>
+              <span>Menos tareas repetitivas y más productividad.</span>
+            </div>
+
+            <div class="stat">
+              <b>Escala</b>
+              <span>Sistemas listos para crecer con tu operación.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual" aria-hidden="true">
+
+          <div class="dashboard-card">
+            <div class="dash-top">
+              <div class="dash-logo">
+                <img src="assets/logo.png" alt="">
+              </div>
+
+              <div class="dash-dots">
+                <i></i><i></i><i></i>
+              </div>
+            </div>
+
+            <div class="kpis">
+              <div class="kpi">
+                <small>Ventas del mes</small>
+                <b>$128K</b>
+                <em>+18.5%</em>
+              </div>
+
+              <div class="kpi">
+                <small>Procesos activos</small>
+                <b>42</b>
+                <em>+12%</em>
+              </div>
+
+              <div class="kpi">
+                <small>Clientes</small>
+                <b>1,452</b>
+                <em>+9.8%</em>
+              </div>
+
+              <div class="kpi">
+                <small>Tareas</small>
+                <b>76</b>
+                <em>-35% manual</em>
+              </div>
+            </div>
+
+            <div class="dash-main">
+              <div class="panel">
+                <h4>Reportes y visibilidad</h4>
+                <div class="chart">
+                  <svg viewBox="0 0 500 160" preserveAspectRatio="none">
+                    <path d="M0 118 C55 98 85 108 130 78 C180 44 220 95 270 62 C315 32 355 52 395 28 C440 6 470 26 500 14"
+                      fill="none" stroke="#0fb9d8" stroke-width="8" stroke-linecap="round"/>
+                    <path d="M0 134 C60 126 90 122 132 96 C190 66 220 110 270 82 C328 52 370 76 410 48 C450 30 475 40 500 32"
+                      fill="none" stroke="#ff6b00" stroke-width="6" stroke-linecap="round" opacity=".95"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="panel">
+                <h4>Flujo automatizado</h4>
+                <div class="flow-grid">
+                  <div class="flow-item">Formulario</div>
+                  <div class="flow-item">Datos</div>
+                  <div class="flow-item">Validación</div>
+                  <div class="flow-item">Reporte</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-card">
+            <div class="phone-screen">
+              <small>Dashboard móvil</small>
+              <h3>$42,850</h3>
+              <div class="phone-chart"></div>
+
+              <div style="margin-top:18px;display:grid;gap:10px;">
+                <div class="flow-item">Clientes: 248</div>
+                <div class="flow-item">Órdenes: 96</div>
+                <div class="flow-item">Pendientes: 12</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-chip">
+            ⚡ Automatización activa
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Qué hacemos</div>
+          <h2 class="section-title">Servicios diseñados para modernizar tu operación</h2>
+          <p class="section-sub">
+            AIPRops ayuda a negocios que necesitan dejar atrás procesos manuales,
+            información dispersa, archivos desorganizados y reportes lentos.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="card">
+            <div class="icon">⚙️</div>
+            <h3>Automatización de procesos</h3>
+            <p>
+              Reducimos tareas repetitivas conectando formularios, correos,
+              documentos, aprobaciones, notificaciones y reportes.
+            </p>
+            <ul>
+              <li>Flujos automáticos</li>
+              <li>Alertas y recordatorios</li>
+              <li>Menos errores operacionales</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">🧩</div>
+            <h3>Creación de sistemas</h3>
+            <p>
+              Diseñamos sistemas personalizados para administrar clientes,
+              casos, ventas, inventario, gastos, documentos y operaciones.
+            </p>
+            <ul>
+              <li>Sistemas a la medida</li>
+              <li>Paneles administrativos</li>
+              <li>Control por roles y áreas</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">📱</div>
+            <h3>Aplicaciones para negocios</h3>
+            <p>
+              Creamos aplicaciones internas para capturar datos, consultar información,
+              operar procesos y mantener al equipo conectado.
+            </p>
+            <ul>
+              <li>Apps móviles y escritorio</li>
+              <li>Formularios inteligentes</li>
+              <li>Consulta de información</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">🌐</div>
+            <h3>Páginas web para negocios</h3>
+            <p>
+              Desarrollamos páginas informativas, landing pages, catálogos y
+              páginas orientadas a ventas.
+            </p>
+            <ul>
+              <li>Páginas informativas</li>
+              <li>Webs para ventas</li>
+              <li>Diseño profesional</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">📊</div>
+            <h3>Dashboards y reportes</h3>
+            <p>
+              Convertimos datos en reportes visuales para tomar decisiones más rápidas
+              y tener mayor control operacional.
+            </p>
+            <ul>
+              <li>Métricas en tiempo real</li>
+              <li>Reportes gerenciales</li>
+              <li>Indicadores de productividad</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon">🔐</div>
+            <h3>Organización y control</h3>
+            <p>
+              Estructuramos la información para que tu empresa tenga más visibilidad,
+              seguimiento, seguridad y eficiencia.
+            </p>
+            <ul>
+              <li>Información centralizada</li>
+              <li>Documentos organizados</li>
+              <li>Procesos medibles</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="soluciones" class="industries">
+      <div class="container">
+        <div class="section-head center">
+          <div class="kicker">Ejemplos de soluciones</div>
+          <h2 class="section-title">Sistemas para diferentes tipos de empresas</h2>
+          <p class="section-sub">
+            No vendemos una plantilla genérica. Evaluamos cómo opera tu negocio
+            y diseñamos una solución alineada a tu flujo real de trabajo.
+          </p>
+        </div>
+
+        <div class="industry-grid">
+          <div class="industry">
+            <b>⚖️ Sistema legal</b>
+            <p>Clientes, casos, documentos, correos, calendario, tareas, pagos online y reportes.</p>
+          </div>
+
+          <div class="industry">
+            <b>🚗 Sistema de dealer</b>
+            <p>Vehículos, inventario, gastos, ventas, clientes, pagos, comisiones y dashboards.</p>
+          </div>
+
+          <div class="industry">
+            <b>🧾 Soluciones contables</b>
+            <p>Cuadres, conciliaciones, reportes, facturas, seguimiento de pagos y automatización documental.</p>
+          </div>
+
+          <div class="industry">
+            <b>🛒 Comercios y ventas</b>
+            <p>Catálogos, órdenes, inventario, rutas, cotizaciones, seguimiento de clientes y ventas.</p>
+          </div>
+
+          <div class="industry">
+            <b>🏗️ Constructoras</b>
+            <p>Proyectos, cotizaciones, gastos, nómina, documentos, estados de avance y reportes.</p>
+          </div>
+
+          <div class="industry">
+            <b>🍽️ Restaurantes</b>
+            <p>Inventario, compras, costos, tareas, controles internos y reportes de operación.</p>
+          </div>
+
+          <div class="industry">
+            <b>📦 Distribución</b>
+            <p>Órdenes, receiving, rutas, vendedores, fotos, documentos, inventario y exportaciones.</p>
+          </div>
+
+          <div class="industry">
+            <b>🏢 Empresas de servicios</b>
+            <p>Clientes, solicitudes, seguimiento, documentación, tareas, calendario y reportes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="container process-grid">
+
+        <div>
+          <div class="kicker">Cómo trabajamos</div>
+          <h2 class="section-title">De la idea al sistema funcional</h2>
+          <p class="section-sub">
+            Entendemos tu operación, detectamos cuellos de botella y creamos una solución
+            que te ayude a controlar, medir y escalar.
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <h3>Evaluación inicial</h3>
+                <p>Conversamos sobre tu negocio, procesos actuales, herramientas y problemas operativos.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <h3>Diseño de solución</h3>
+                <p>Definimos módulos, pantallas, automatizaciones, permisos, reportes y flujo ideal.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <h3>Desarrollo e implementación</h3>
+                <p>Creamos el sistema, conectamos datos, automatizamos procesos y validamos resultados.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div>
+                <h3>Entrega, ajustes y soporte</h3>
+                <p>Capacitamos, ajustamos detalles y dejamos la operación clara, organizada y funcional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="big-card">
+          <div class="badge">
+            <span></span>
+            Simplificación, control y eficiencia
+          </div>
+
+          <h3>
+            Tu negocio no necesita trabajar más complicado.
+            Necesita trabajar más inteligente.
+          </h3>
+
+          <p>
+            Cada sistema se diseña para centralizar información, reducir errores,
+            mejorar la comunicación interna, acelerar tareas y darle a la gerencia
+            una visión más clara de la operación.
+          </p>
+
+          <div class="benefit-grid">
+            <div class="benefit">
+              <b>Menos</b>
+              <span>procesos manuales y tareas repetitivas.</span>
+            </div>
+
+            <div class="benefit">
+              <b>Más</b>
+              <span>control sobre clientes, tareas y datos.</span>
+            </div>
+
+            <div class="benefit">
+              <b>Mejor</b>
+              <span>visibilidad con reportes y métricas.</span>
+            </div>
+
+            <div class="benefit">
+              <b>Mayor</b>
+              <span>capacidad para crecer y escalar.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="agenda" class="agenda-section">
+      <div class="container">
+        <div class="agenda-box">
+
+          <div class="agenda-top">
+            <div>
+              <div class="kicker">Coordina tu evaluación</div>
+              <h2 class="section-title">Agenda una llamada estratégica</h2>
+              <p>
+                En una llamada de 30 minutos evaluamos qué procesos puedes automatizar,
+                qué sistema necesita tu empresa y qué solución puede darte más control,
+                eficiencia y crecimiento.
+              </p>
+            </div>
+
+            <a class="btn btn-secondary" href="https://wa.me/17874788885" target="_blank" rel="noopener">
+              Prefiero WhatsApp
+            </a>
+          </div>
+
+          <div class="calendly-shell">
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/aiprops/30min?timezone=America%2FPuerto_Rico&primary_color=ff6b00&text_color=061426&hide_gdpr_banner=1"
+            ></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="AIPRops Logo" class="footer-logo-img">
+      </div>
 
       <p>
-        Ayudamos a empresas a salir del revolú operativo y la improvisación,
-eliminando procesos manuales y diseñando sistemas inteligentes
-que aportan control, claridad y eficiencia real.
+        © 2025 AIPRops · Sistemas · Automatización · Datos · Puerto Rico
       </p>
 
-      <a href="#agenda" class="btn-primary">
-        Hablemos de tu Operación
-      </a>
-    </div>
-  </section>
-  
-  <!-- QUE HACEMOS -->
-  <section class="section">
-    <h2>¿Qué hace AIPRops?</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Diagnóstico Operativo</h3>
-        <p>
-          Analizamos cómo funciona tu operación hoy,
-          identificando procesos manuales, ineficiencias operativas
-          y riesgos ocultos.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Diseño de Sistemas</h3>
-        <p>
-          Diseñamos sistemas personalizados, adaptados a la operación real de tu empresa,
-evitando software innecesario y costos innecesarios.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Automatización Inteligente</h3>
-        <p>
-          Eliminamos tareas repetitivas y desorganización
-          para que tu empresa opere con control.
-        </p>
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#agenda">Agenda</a>
+        <a href="https://wa.me/17874788885" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-  </section>  
-  
-  <!-- COMO FUNCIONA -->
-  <section class="section dark">
-    <h2>¿Cómo funciona?</h2>
-
-    <ol class="steps">
-      <li>Coordinamos una llamada estratégica</li>
-      <li>Entendemos tu operación y procesos</li>
-      <li>Identificamos oportunidades reales de mejora</li>
-      <li>Definimos si AIPRops es una buena opción para ti</li>
-    </ol>
-  </section>
-  
-  <!-- AGENDA -->
-  <section id="agenda" class="section">
-    <h2>Coordina una llamada estratégica</h2>
-
-    <p>
-      Una conversación clara y directa para entender tu operación,
-detectar dónde se pierde tiempo, dinero y control,
-y trazar los próximos pasos con claridad.
-    </p>
-
-    
-    <!-- CALENDLY VA AQUÍ EN EL PRÓXIMO PASO -->
-    <!-- CALENDLY EMBED -->
-<div
-  class="calendly-inline-widget"
-  data-url="https://calendly.com/aiprops/30min"
-  style="min-width:320px;height:750px;">
-</div>
-
-<script
-  type="text/javascript"
-  src="https://assets.calendly.com/assets/external/widget.js"
-  async>
-</script>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      © 2025 AIPRops · Sistemas · Automatización · Datos
-    </p>
   </footer>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/17874788885"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    ☎
+  </a>
+
+  <script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async>
+  </script>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobilePanel = document.getElementById("mobilePanel");
+
+    menuBtn.addEventListener("click", () => {
+      mobilePanel.classList.toggle("active");
+      menuBtn.textContent = mobilePanel.classList.contains("active") ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".mobile-panel a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobilePanel.classList.remove("active");
+        menuBtn.textContent = "☰";
+      });
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
