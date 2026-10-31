@@ -1014,7 +1014,30 @@
         height: 58px;
       }
     }
-  </style>
+  
+/* AIProps Solutions Lab v2 - adiciones aisladas */
+.lab-section{position:relative;padding:90px 0;background:radial-gradient(ellipse at 70% 10%,rgba(15,185,216,.12),transparent 48%)}
+.lab-kicker{display:inline-flex;align-items:center;gap:8px;color:#23d5ee;font-size:.77rem;letter-spacing:.18em;font-weight:800;text-transform:uppercase;margin-bottom:14px}
+.lab-title{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;line-height:1.06;max-width:800px;margin-bottom:18px;letter-spacing:-.04em}
+.lab-title span{color:#ff7822}.lab-desc{max-width:730px;color:#aec3dc;font-size:1.04rem;line-height:1.7;margin-bottom:28px}
+.lab-stats{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 30px}.lab-stats span{font-size:.84rem;color:#adc4d6}.lab-stats strong{color:#fff;font-size:1.2rem;margin-right:6px}
+.lab-filters{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 28px}.lab-filter{border:1px solid rgba(255,255,255,.17);background:#0a2039;color:#dce9f5;padding:10px 16px;border-radius:100px;font-size:.82rem;cursor:pointer;font-weight:700;transition:.2s}
+.lab-filter:hover,.lab-filter[aria-pressed=true]{background:#0fb9d8;color:#04111f;border-color:#0fb9d8}
+.lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.lab-card{overflow:hidden;min-width:0;display:flex;flex-direction:column;border:1px solid rgba(75,182,215,.22);border-radius:22px;background:linear-gradient(155deg,#0d263f,#09192e 70%);box-shadow:0 18px 45px rgba(0,0,0,.2);transition:transform .2s,border-color .2s}
+.lab-card:hover{transform:translateY(-5px);border-color:#0fb9d8}
+.lab-card[hidden]{display:none}
+.lab-art{height:180px;padding:17px 18px;background:radial-gradient(circle at 88% 25%,rgba(255,107,0,.25),transparent 38%),linear-gradient(130deg,#092f4c,#061323);position:relative;overflow:hidden}
+.lab-art::before{content:'';position:absolute;width:220px;height:160px;border:1px solid rgba(35,213,238,.4);border-radius:15px;right:-35px;top:34px;transform:rotate(-12deg);box-shadow:inset 0 0 60px rgba(12,173,210,.12),0 0 40px rgba(0,0,0,.3)}
+.lab-art::after{content:'';position:absolute;width:200px;height:95px;right:10px;top:58px;background:repeating-linear-gradient(90deg,rgba(35,213,238,.23) 0 12px,transparent 12px 29px);opacity:.55;clip-path:polygon(0 80%,18% 53%,35% 60%,55% 22%,74% 41%,100% 0,100% 100%,0 100%)}
+.lab-code{position:relative;z-index:2;font:700 .7rem ui-monospace,monospace;letter-spacing:.14em;color:#78e8fa}.lab-mark{position:relative;z-index:2;font-size:2.5rem;margin-top:27px;line-height:1}.lab-art b{position:absolute;bottom:16px;left:18px;z-index:2;color:#e4faff;font-size:.68rem;letter-spacing:.13em}
+.lab-body{padding:22px;display:flex;flex:1;flex-direction:column}.lab-type{color:#ff8a1c;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}.lab-body h3{font-size:1.35rem;margin:10px 0}.lab-body p{font-size:.91rem;line-height:1.62;color:#a9c0d8;flex:1}.lab-tags{font-size:.74rem;color:#6dddf0;padding:16px 0;line-height:1.5}
+.lab-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.lab-action{display:flex;align-items:center;justify-content:center;text-align:center;min-height:42px;border-radius:10px;text-decoration:none;padding:9px 7px;font-size:.78rem;font-weight:800;border:1px solid rgba(255,255,255,.2);cursor:pointer;background:#102a46;color:white}.lab-action.main{background:linear-gradient(110deg,#f76b13,#ff8b31);border-color:transparent;color:#071526}.lab-action:hover{filter:brightness(1.1)}
+.lab-note{color:#91acc4;margin:26px 0 0;font-size:.81rem;line-height:1.65}.lab-video-dialog{max-width:780px;width:calc(100% - 32px);border:1px solid #29728f;border-radius:22px;background:#08192c;color:white;padding:0;box-shadow:0 30px 100px rgba(0,0,0,.8);margin:auto}.lab-video-dialog::backdrop{background:rgba(0,5,17,.85);backdrop-filter:blur(5px)}.lab-dialog-content{padding:25px}.lab-dialog-top{display:flex;justify-content:space-between;align-items:start;gap:16px}.lab-dialog-title{font-size:1.7rem;margin-bottom:10px}.lab-dialog-close{border:1px solid #53687c;border-radius:8px;background:#102b43;color:#fff;padding:9px 12px;cursor:pointer}.lab-placeholder{display:flex;justify-content:center;align-items:center;text-align:center;flex-direction:column;gap:12px;aspect-ratio:16/9;border-radius:12px;background:radial-gradient(circle,#103957,#071a2e 66%);border:1px dashed #267997;color:#b2d2e5;padding:24px;margin:16px 0}.lab-placeholder strong{color:white;font-size:1.12rem}.lab-placeholder .play{font-size:3rem;color:#ff7b24}.lab-dialog-content video{width:100%;border-radius:12px;margin:16px 0;background:#020c18}.lab-dialog-copy{font-size:.91rem;color:#c4d5e4;line-height:1.65;margin:12px 0 18px}.lab-dialog-cta{display:inline-flex;background:#ff6b00;color:#07101b;border-radius:10px;padding:13px 18px;font-weight:800;text-decoration:none}
+@media(max-width:940px){.lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.lab-section{padding:60px 0}.lab-grid{grid-template-columns:1fr}.lab-art{height:165px}.lab-stats{gap:12px}.lab-dialog-content{padding:18px}}
+@media(prefers-reduced-motion:reduce){.lab-card{transition:none}}
+
+</style>
 </head>
 
 <body>
@@ -1028,6 +1051,7 @@
       <nav class="nav-links">
         <a href="#servicios">Servicios</a>
         <a href="#soluciones">Soluciones</a>
+        <a href="#demo-lab">Demo Lab</a>
         <a href="#proceso">Proceso</a>
         <a href="#agenda">Agenda</a>
       </nav>
@@ -1052,6 +1076,15 @@
     <div class="mobile-panel" id="mobilePanel">
       <a href="#servicios">Servicios</a>
       <a href="#soluciones">Soluciones</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#agenda">Agendar evaluación</a>
+      <a href="tel:+17874788885">Llamar: 787-478-8885</a>
+      <a href="mailto:soluciones@aiprops.online">Email: soluciones@aiprops.online</a>
+      <a href="https://wa.me/17874788885" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="#servicios">Servicios</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#demo-lab">Demo Lab</a>
       <a href="#proceso">Proceso</a>
       <a href="#agenda">Agendar evaluación</a>
       <a href="tel:+17874788885">Llamar: 787-478-8885</a>
@@ -1357,6 +1390,11 @@
       </div>
     </section>
 
+
+<!-- AIProps Solutions Lab: biblioteca audiovisual (sin videos inventados) -->
+<section id="demo-lab" class="lab-section" aria-labelledby="lab-heading"><div class="container"><div class="lab-kicker">✦ AIProps / Solutions Lab</div><h2 class="lab-title" id="lab-heading">NO SOLO LO DECIMOS. <span>TE MOSTRAMOS LO QUE CONSTRUIMOS.</span></h2><p class="lab-desc">Explora soluciones digitales para empresas. Cada sistema puede adaptarse a tu operación, industria y flujo de trabajo. Estamos preparando demostraciones grabadas de los procesos completos.</p><div class="lab-stats"><span><strong>06</strong> soluciones destacadas</span><span><strong>01</strong> objetivo: transformar tu operación</span></div><div class="lab-filters" role="group" aria-label="Filtrar soluciones"><button type="button" class="lab-filter" data-filter="todos" aria-pressed="true">Todos</button><button type="button" class="lab-filter" data-filter="ventas" aria-pressed="false">Ventas</button><button type="button" class="lab-filter" data-filter="inventario" aria-pressed="false">Inventario</button><button type="button" class="lab-filter" data-filter="contabilidad" aria-pressed="false">Contabilidad</button><button type="button" class="lab-filter" data-filter="legal" aria-pressed="false">Legal</button><button type="button" class="lab-filter" data-filter="operaciones" aria-pressed="false">Operaciones</button></div><div class="lab-grid"><article class="lab-card" data-category="legal"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">⚖</div><b>DEMO DE REFERENCIA</b></div><div class="lab-body"><span class="lab-type">Gestión legal</span><h3>LegalOps</h3><p>Clientes, casos, documentos y vencimientos.</p><div class="lab-tags">Expedientes · Tareas · Calendario</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="legalops" aria-label="Ver presentación de LegalOps">▶ Ver demo</button><a class="lab-action main" href="#agenda" aria-label="Coordinar reunión sobre LegalOps">Coordinar ↗</a></div></div></article><article class="lab-card" data-category="ventas"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▤</div><b>DEMO DE REFERENCIA</b></div><div class="lab-body"><span class="lab-type">Cotización y ventas</span><h3>QuoteFlow</h3><p>Del catálogo de servicios a la cotización, factura y seguimiento.</p><div class="lab-tags">Catálogos · PDF · Facturación</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="quoteflow" aria-label="Ver presentación de QuoteFlow">▶ Ver demo</button><a class="lab-action main" href="#agenda" aria-label="Coordinar reunión sobre QuoteFlow">Coordinar ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">🚘</div><b>DEMO DE REFERENCIA</b></div><div class="lab-body"><span class="lab-type">Dealers de autos</span><h3>AutoSales Pro</h3><p>Inventario de unidades, costos acumulados, ventas y márgenes.</p><div class="lab-tags">Vehículos · Costos · Rentabilidad</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="autosales" aria-label="Ver presentación de AutoSales Pro">▶ Ver demo</button><a class="lab-action main" href="#agenda" aria-label="Coordinar reunión sobre AutoSales Pro">Coordinar ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▦</div><b>DEMO DE REFERENCIA</b></div><div class="lab-body"><span class="lab-type">Comercio e inventario</span><h3>RetailControl</h3><p>Compras, proveedores, existencias y alertas de reposición.</p><div class="lab-tags">Inventario · Alertas · Compras</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="retail" aria-label="Ver presentación de RetailControl">▶ Ver demo</button><a class="lab-action main" href="#agenda" aria-label="Coordinar reunión sobre RetailControl">Coordinar ↗</a></div></div></article><article class="lab-card" data-category="contabilidad"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">≋</div><b>DEMO DE REFERENCIA</b></div><div class="lab-body"><span class="lab-type">Contabilidad y control</span><h3>ReconciliationHub</h3><p>Cierres diarios, diferencias, aprobaciones e historial auditable.</p><div class="lab-tags">Cuadres · Validación · Auditoría</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="reconciliation" aria-label="Ver presentación de ReconciliationHub">▶ Ver demo</button><a class="lab-action main" href="#agenda" aria-label="Coordinar reunión sobre ReconciliationHub">Coordinar ↗</a></div></div></article><article class="lab-card" data-category="operaciones"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">◈</div><b>DEMO DE REFERENCIA</b></div><div class="lab-body"><span class="lab-type">Operación empresarial</span><h3>Business ERP</h3><p>Clientes, cotizaciones, facturas, inventario e indicadores.</p><div class="lab-tags">Operaciones · Finanzas · Reportes</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="erp" aria-label="Ver presentación de Business ERP">▶ Ver demo</button><a class="lab-action main" href="#agenda" aria-label="Coordinar reunión sobre Business ERP">Coordinar ↗</a></div></div></article></div><p class="lab-note">Las tarjetas muestran conceptos de sistemas personalizables. Los videos aún no están publicados; el botón “Ver demo” indica claramente cuando la grabación está pendiente.</p></div></section>
+<dialog class="lab-video-dialog" id="labVideoDialog" aria-labelledby="labDialogTitle"><div class="lab-dialog-content"><div class="lab-dialog-top"><h2 class="lab-dialog-title" id="labDialogTitle">Demostración</h2><button type="button" class="lab-dialog-close" id="labDialogClose" aria-label="Cerrar demostración">✕ Cerrar</button></div><div id="labVideoHolder"></div><p class="lab-dialog-copy" id="labDialogCopy"></p><a class="lab-dialog-cta" href="#agenda" id="labDialogCta">Coordinar evaluación →</a></div></dialog>
+
     <section id="proceso">
       <div class="container process-grid">
 
@@ -1561,5 +1599,39 @@
     });
   </script>
 
+
+<script>
+// AIProps Solutions Lab: para activar un video, colocar assets/demos/{id}.mp4 y cambiar su propiedad video.
+(function(){
+ const demos={
+ legalops:{name:'LegalOps',description:'Gestión de clientes, casos, documentos, tareas y calendario.',video:null},
+ quoteflow:{name:'QuoteFlow',description:'Cotizaciones, catálogo, generación de documentos y facturación.',video:null},
+ autosales:{name:'AutoSales Pro',description:'Control de vehículos, costos de adquisición, preparación y ventas.',video:null},
+ retail:{name:'RetailControl',description:'Inventario, proveedores, compras y puntos de reposición.',video:null},
+ reconciliation:{name:'ReconciliationHub',description:'Cierres, validaciones, historial y aprobaciones.',video:null},
+ erp:{name:'Business ERP',description:'Operaciones comerciales, inventario y panel administrativo.',video:null}
+ };
+ const dialog=document.getElementById('labVideoDialog');if(!dialog)return;
+ const holder=document.getElementById('labVideoHolder');
+ document.querySelectorAll('.lab-filter').forEach(btn=>btn.addEventListener('click',()=>{
+   const f=btn.dataset.filter;
+   document.querySelectorAll('.lab-filter').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+   document.querySelectorAll('.lab-card').forEach(card=>{card.hidden=f!=='todos'&&card.dataset.category!==f;});
+ }));
+ document.querySelectorAll('[data-demo]').forEach(btn=>btn.addEventListener('click',()=>{
+   const data=demos[btn.dataset.demo];if(!data)return;
+   document.getElementById('labDialogTitle').textContent=data.name;
+   document.getElementById('labDialogCopy').textContent=data.description+' Solicita una evaluación para conversar sobre una solución adaptada a tu negocio.';
+   holder.replaceChildren();
+   if(data.video){const video=document.createElement('video');video.controls=true;video.preload='none';video.playsInline=true;video.src=data.video;holder.append(video);}
+   else{const placeholder=document.createElement('div');placeholder.className='lab-placeholder';placeholder.innerHTML='<span class="play" aria-hidden="true">▶</span><strong>Demostración en preparación</strong><span>Próximamente publicaremos el video funcional de esta solución.</span>';holder.append(placeholder);}
+   if(dialog.showModal)dialog.showModal();
+ }));
+ document.getElementById('labDialogClose').addEventListener('click',()=>dialog.close());
+ document.getElementById('labDialogCta').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+ dialog.addEventListener('close',()=>{const video=holder.querySelector('video');if(video)video.pause()});
+})();
+</script>
 </body>
 </html>
