@@ -1014,7 +1014,56 @@
         height: 58px;
       }
     }
-  </style>
+  
+/* AIProps Solutions Lab v2 - adiciones aisladas */
+.lab-section{position:relative;padding:90px 0;background:radial-gradient(ellipse at 70% 10%,rgba(15,185,216,.12),transparent 48%)}
+.lab-kicker{display:inline-flex;align-items:center;gap:8px;color:#23d5ee;font-size:.77rem;letter-spacing:.18em;font-weight:800;text-transform:uppercase;margin-bottom:14px}
+.lab-title{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;line-height:1.06;max-width:800px;margin-bottom:18px;letter-spacing:-.04em}
+.lab-title span{color:#ff7822}.lab-desc{max-width:730px;color:#aec3dc;font-size:1.04rem;line-height:1.7;margin-bottom:28px}
+.lab-stats{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 30px}.lab-stats span{font-size:.84rem;color:#adc4d6}.lab-stats strong{color:#fff;font-size:1.2rem;margin-right:6px}
+.lab-filters{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 28px}.lab-filter{border:1px solid rgba(255,255,255,.17);background:#0a2039;color:#dce9f5;padding:10px 16px;border-radius:100px;font-size:.82rem;cursor:pointer;font-weight:700;transition:.2s}
+.lab-filter:hover,.lab-filter[aria-pressed=true]{background:#0fb9d8;color:#04111f;border-color:#0fb9d8}
+.lab-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.lab-card{overflow:hidden;min-width:0;display:flex;flex-direction:column;border:1px solid rgba(75,182,215,.22);border-radius:22px;background:linear-gradient(155deg,#0d263f,#09192e 70%);box-shadow:0 18px 45px rgba(0,0,0,.2);transition:transform .2s,border-color .2s}
+.lab-card:hover{transform:translateY(-5px);border-color:#0fb9d8}
+.lab-card[hidden]{display:none}
+.lab-art{height:180px;padding:17px 18px;background:radial-gradient(circle at 88% 25%,rgba(255,107,0,.25),transparent 38%),linear-gradient(130deg,#092f4c,#061323);position:relative;overflow:hidden}
+.lab-art::before{content:'';position:absolute;width:220px;height:160px;border:1px solid rgba(35,213,238,.4);border-radius:15px;right:-35px;top:34px;transform:rotate(-12deg);box-shadow:inset 0 0 60px rgba(12,173,210,.12),0 0 40px rgba(0,0,0,.3)}
+.lab-art::after{content:'';position:absolute;width:200px;height:95px;right:10px;top:58px;background:repeating-linear-gradient(90deg,rgba(35,213,238,.23) 0 12px,transparent 12px 29px);opacity:.55;clip-path:polygon(0 80%,18% 53%,35% 60%,55% 22%,74% 41%,100% 0,100% 100%,0 100%)}
+.lab-code{position:relative;z-index:2;font:700 .7rem ui-monospace,monospace;letter-spacing:.14em;color:#78e8fa}.lab-mark{position:relative;z-index:2;font-size:2.5rem;margin-top:27px;line-height:1}.lab-art b{position:absolute;bottom:16px;left:18px;z-index:2;color:#e4faff;font-size:.68rem;letter-spacing:.13em}
+.lab-body{padding:22px;display:flex;flex:1;flex-direction:column}.lab-type{color:#ff8a1c;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}.lab-body h3{font-size:1.35rem;margin:10px 0}.lab-body p{font-size:.91rem;line-height:1.62;color:#a9c0d8;flex:1}.lab-tags{font-size:.74rem;color:#6dddf0;padding:16px 0;line-height:1.5}
+.lab-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.lab-action{display:flex;align-items:center;justify-content:center;text-align:center;min-height:42px;border-radius:10px;text-decoration:none;padding:9px 7px;font-size:.78rem;font-weight:800;border:1px solid rgba(255,255,255,.2);cursor:pointer;background:#102a46;color:white}.lab-action.main{background:linear-gradient(110deg,#f76b13,#ff8b31);border-color:transparent;color:#071526}.lab-action:hover{filter:brightness(1.1)}
+.lab-note{color:#91acc4;margin:26px 0 0;font-size:.81rem;line-height:1.65}.lab-video-dialog{max-width:780px;width:calc(100% - 32px);border:1px solid #29728f;border-radius:22px;background:#08192c;color:white;padding:0;box-shadow:0 30px 100px rgba(0,0,0,.8);margin:auto}.lab-video-dialog::backdrop{background:rgba(0,5,17,.85);backdrop-filter:blur(5px)}.lab-dialog-content{padding:25px}.lab-dialog-top{display:flex;justify-content:space-between;align-items:start;gap:16px}.lab-dialog-title{font-size:1.7rem;margin-bottom:10px}.lab-dialog-close{border:1px solid #53687c;border-radius:8px;background:#102b43;color:#fff;padding:9px 12px;cursor:pointer}.lab-placeholder{display:flex;justify-content:center;align-items:center;text-align:center;flex-direction:column;gap:12px;aspect-ratio:16/9;border-radius:12px;background:radial-gradient(circle,#103957,#071a2e 66%);border:1px dashed #267997;color:#b2d2e5;padding:24px;margin:16px 0}.lab-placeholder strong{color:white;font-size:1.12rem}.lab-placeholder .play{font-size:3rem;color:#ff7b24}.lab-dialog-content video{width:100%;border-radius:12px;margin:16px 0;background:#020c18}.lab-dialog-copy{font-size:.91rem;color:#c4d5e4;line-height:1.65;margin:12px 0 18px}.lab-dialog-cta{display:inline-flex;background:#ff6b00;color:#07101b;border-radius:10px;padding:13px 18px;font-weight:800;text-decoration:none}
+@media(max-width:940px){.lab-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.lab-section{padding:60px 0}.lab-grid{grid-template-columns:1fr}.lab-art{height:165px}.lab-stats{gap:12px}.lab-dialog-content{padding:18px}}
+@media(prefers-reduced-motion:reduce){.lab-card{transition:none}}
+
+
+/* AIProps · Formulario de prospectos y agendamiento después de enviar */
+.lead-panel,.lead-success{margin-top:24px;padding:clamp(22px,4vw,34px);background:linear-gradient(135deg,#0b2638,#081b2b);border:1px solid #28566a;border-radius:20px}
+.lead-heading h3,.lead-success h3{font-size:clamp(25px,3vw,36px);margin:10px 0;color:#fff}.lead-heading p,.lead-success p{color:#c4dae3;line-height:1.65}
+.lead-badge{display:inline-block;color:#2ce4da;font-size:12px;letter-spacing:.08em;font-weight:800;text-transform:uppercase}
+.lead-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
+.lead-form label{color:#d5e6ed;font-size:14px;font-weight:700;display:block}
+.lead-form input:not([type=checkbox]),.lead-form select,.lead-form textarea{display:block;width:100%;margin-top:8px;padding:13px 14px;border-radius:10px;background:#071725;border:1px solid #396074;color:#fff;font:inherit;outline-offset:3px}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{border-color:#20d0dc;outline:2px solid #20d0dc33}
+.lead-form input::placeholder,.lead-form textarea::placeholder{color:#90aab8}
+.lead-form .lead-full{grid-column:1/-1}.lead-consent{display:flex!important;align-items:flex-start;gap:10px;line-height:1.6;font-weight:400!important}
+.lead-consent input{margin-top:4px;flex:none;width:18px;height:18px;accent-color:#12c6d6}.lead-consent a{color:#69e4ee}
+.lead-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px}.lead-actions button:disabled{opacity:.5;cursor:progress}
+#leadStatus{font-weight:600;color:#d9edee}.lead-honeypot{position:absolute;left:-9999px;top:-9999px}
+.lead-secondary{display:inline-block;margin:12px 20px;color:#56e4ed;text-decoration:underline}.lead-calendar{height:760px;margin-top:18px;background:#fff;border-radius:16px;overflow:auto}
+.lead-success[hidden],.lead-calendar[hidden]{display:none!important}.lead-footnote{font-size:12px!important}
+@media(max-width:720px){.lead-form{grid-template-columns:1fr}.lead-form .lead-full{grid-column:auto}.lead-calendar{height:740px}.lead-secondary{margin-left:0}}
+</style>
+<style>
+.welcome-section{padding:78px 0;background:radial-gradient(circle at 74% 20%,rgba(8,174,191,.14),transparent 42%),#061827;border-block:1px solid rgba(32,185,207,.22)}
+.welcome-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:42px;align-items:center}
+.welcome-copy h2{font-size:clamp(30px,3.4vw,53px);line-height:1.08;margin:18px 0;color:#fff}.welcome-copy h2 span{color:#18c8dd}.welcome-copy p{color:#c0d7df;line-height:1.7;font-size:17px}.welcome-cta{display:inline-block;margin-top:20px;padding:14px 22px;background:#ff6b00;color:#04131c;text-decoration:none;border-radius:10px;font-weight:800}
+.welcome-media video{width:100%;display:block;background:#010b14;aspect-ratio:16/9;object-fit:contain;border:1px solid #26758b;border-radius:15px;box-shadow:0 18px 55px rgba(0,0,0,.35)}.welcome-media small{display:block;color:#9fbcc9;margin-top:12px}
+.lab-card .lab-art{position:relative;overflow:hidden}.lab-card .lab-art::before{content:'';position:absolute;inset:0;background-image:var(--poster);background-size:cover;background-position:center;opacity:.3;filter:saturate(1.1)}.lab-card .lab-art>*{position:relative}
+.lab-video-holder video{max-width:100%;height:auto}
+@media(max-width:800px){.welcome-layout{grid-template-columns:1fr}.welcome-section{padding:46px 0}}
+</style>
 </head>
 
 <body>
@@ -1028,8 +1077,9 @@
       <nav class="nav-links">
         <a href="#servicios">Servicios</a>
         <a href="#soluciones">Soluciones</a>
+        <a href="#demo-lab">Demo Lab</a>
         <a href="#proceso">Proceso</a>
-        <a href="#agenda">Agenda</a>
+        <a href="#agenda">Contacto</a>
       </nav>
 
       <div class="nav-actions">
@@ -1042,7 +1092,7 @@
         </a>
 
         <a class="btn btn-primary" href="#agenda">
-          Agendar evaluación
+          Solicitar evaluación
         </a>
       </div>
 
@@ -1053,7 +1103,16 @@
       <a href="#servicios">Servicios</a>
       <a href="#soluciones">Soluciones</a>
       <a href="#proceso">Proceso</a>
-      <a href="#agenda">Agendar evaluación</a>
+      <a href="#agenda">Solicitar evaluación</a>
+      <a href="tel:+17874788885">Llamar: 787-478-8885</a>
+      <a href="mailto:soluciones@aiprops.online">Email: soluciones@aiprops.online</a>
+      <a href="https://wa.me/17874788885" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="#servicios">Servicios</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#demo-lab">Demo Lab</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#agenda">Solicitar evaluación</a>
       <a href="tel:+17874788885">Llamar: 787-478-8885</a>
       <a href="mailto:soluciones@aiprops.online">Email: soluciones@aiprops.online</a>
       <a href="https://wa.me/17874788885" target="_blank" rel="noopener">Escribir por WhatsApp</a>
@@ -1085,7 +1144,7 @@
 
           <div class="hero-cta">
             <a class="btn btn-primary" href="#agenda">
-              Agendar evaluación →
+              Solicitar evaluación →
             </a>
 
             <a class="btn btn-secondary" href="https://wa.me/17874788885" target="_blank" rel="noopener">
@@ -1201,6 +1260,7 @@
       </div>
     </section>
 
+<section id="bienvenida" class="welcome-section"><div class="container welcome-layout"><div class="welcome-copy"><span class="lab-kicker">✦ CONOCE A AIPROPS</span><h2>TECNOLOGÍA QUE SE <span>ADAPTA A TU NEGOCIO.</span></h2><p>Conoce quién está detrás de AIProps, cómo trabajamos y cómo explorar las soluciones demostrativas. Cada negocio es diferente: el sistema se diseña alrededor de sus procesos.</p><a class="welcome-cta" href="#demo-lab">Explorar las 6 soluciones ↗</a></div><div class="welcome-media"><video controls preload="metadata" playsinline poster="assets/demos/intro-poster.jpg" aria-label="Video de presentación de AIProps"><source src="assets/demos/intro.mp4" type="video/mp4">Tu navegador no soporta video HTML5.</video><small>Presentación personal de AIProps · 1:16 · Pulsa reproducir para comenzar</small></div></div></section>
     <section id="servicios">
       <div class="container">
         <div class="section-head">
@@ -1357,6 +1417,11 @@
       </div>
     </section>
 
+
+<!-- AIProps Solutions Lab: biblioteca audiovisual (sin videos inventados) -->
+<section id="demo-lab" class="lab-section" aria-labelledby="lab-heading"><div class="container"><div class="lab-kicker">✦ AIProps / Solutions Lab</div><h2 class="lab-title" id="lab-heading">NO SOLO LO DECIMOS. <span>TE MOSTRAMOS LO QUE CONSTRUIMOS.</span></h2><p class="lab-desc">Explora soluciones digitales para empresas. Cada sistema puede adaptarse a tu operación, industria y flujo de trabajo. Conoce sistemas adaptables a diferentes empresas. Mira los siete videos comerciales y descubre soluciones configurables según las necesidades de cada negocio.</p><div class="lab-stats"><span><strong>06</strong> soluciones destacadas</span><span><strong>07</strong> videos disponibles · <strong>01</strong> objetivo: transformar tu operación</span></div><div class="lab-filters" role="group" aria-label="Filtrar soluciones"><button type="button" class="lab-filter" data-filter="todos" aria-pressed="true">Todos</button><button type="button" class="lab-filter" data-filter="ventas" aria-pressed="false">Ventas</button><button type="button" class="lab-filter" data-filter="inventario" aria-pressed="false">Inventario</button><button type="button" class="lab-filter" data-filter="contabilidad" aria-pressed="false">Contabilidad</button><button type="button" class="lab-filter" data-filter="legal" aria-pressed="false">Legal</button><button type="button" class="lab-filter" data-filter="operaciones" aria-pressed="false">Operaciones</button></div><div class="lab-grid"><article class="lab-card" data-category="legal"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">⚖</div><b>VIDEO COMERCIAL DISPONIBLE</b></div><div class="lab-body"><span class="lab-type">Gestión legal</span><h3>LegalOps Pro</h3><p>Clientes, casos, documentos y vencimientos.</p><div class="lab-tags">Expedientes · Tareas · Calendario</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="legalops" aria-label="Ver presentación de LegalOps">▶ Ver video</button><a class="lab-action main" href="soluciones/legalops/" aria-label="Conocer detalles de LegalOps">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="ventas"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▤</div><b>VIDEO COMERCIAL DISPONIBLE</b></div><div class="lab-body"><span class="lab-type">Cotización y ventas</span><h3>QuoteFlow Pro</h3><p>Cotizaciones, facturación, inventario y cobros. Demo real en una ferretería; adaptable a otros comercios.</p><div class="lab-tags">Cotizaciones · Facturas · Reportes</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="quoteflow" aria-label="Reproducir video comercial QuoteFlow Pro">▶ Ver video</button><a class="lab-action main" href="soluciones/quoteflow/" aria-label="Conocer QuoteFlow Pro">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">🚘</div><b>VIDEO COMERCIAL DISPONIBLE</b></div><div class="lab-body"><span class="lab-type">Dealers de autos</span><h3>AutoSales Pro</h3><p>Inventario de unidades, costos acumulados, ventas y márgenes.</p><div class="lab-tags">Vehículos · Costos · Rentabilidad</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="autosales" aria-label="Ver presentación de AutoSales Pro">▶ Ver video</button><a class="lab-action main" href="soluciones/autosales/" aria-label="Conocer detalles de AutoSales Pro">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▦</div><b>VIDEO COMERCIAL DISPONIBLE</b></div><div class="lab-body"><span class="lab-type">Comercio e inventario</span><h3>RetailControl Pro</h3><p>Compras, proveedores, existencias y alertas de reposición.</p><div class="lab-tags">Inventario · Alertas · Compras</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="retail" aria-label="Ver presentación de RetailControl">▶ Ver video</button><a class="lab-action main" href="soluciones/retail/" aria-label="Conocer detalles de RetailControl">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="contabilidad"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">≋</div><b>VIDEO COMERCIAL DISPONIBLE</b></div><div class="lab-body"><span class="lab-type">Contabilidad y control</span><h3>ReconciliationHub Pro</h3><p>Cierres diarios, diferencias, aprobaciones e historial auditable.</p><div class="lab-tags">Cuadres · Validación · Auditoría</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="reconciliation" aria-label="Ver presentación de ReconciliationHub">▶ Ver video</button><a class="lab-action main" href="soluciones/reconciliation/" aria-label="Conocer detalles de ReconciliationHub">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="operaciones"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">◈</div><b>VIDEO COMERCIAL DISPONIBLE</b></div><div class="lab-body"><span class="lab-type">Operación empresarial</span><h3>Business ERP Pro</h3><p>Clientes, cotizaciones, facturas, inventario e indicadores.</p><div class="lab-tags">Operaciones · Finanzas · Reportes</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="erp" aria-label="Ver presentación de Business ERP">▶ Ver video</button><a class="lab-action main" href="soluciones/erp/" aria-label="Conocer detalles de Business ERP">Conocer más ↗</a></div></div></article></div><p class="lab-note">Las tarjetas muestran conceptos de sistemas personalizables. Los videos muestran prototipos funcionales de demostración, con datos ficticios. Cada implementación empresarial se diseña y valida según sus requerimientos.</p></div></section>
+<dialog class="lab-video-dialog" id="labVideoDialog" aria-labelledby="labDialogTitle"><div class="lab-dialog-content"><div class="lab-dialog-top"><h2 class="lab-dialog-title" id="labDialogTitle">Demostración</h2><button type="button" class="lab-dialog-close" id="labDialogClose" aria-label="Cerrar demostración">✕ Cerrar</button></div><div id="labVideoHolder"></div><p class="lab-dialog-copy" id="labDialogCopy"></p><a class="lab-dialog-cta" href="#agenda" id="labDialogCta">Solicitar información →</a></div></dialog>
+
     <section id="proceso">
       <div class="container process-grid">
 
@@ -1452,8 +1517,8 @@
 
           <div class="agenda-top">
             <div>
-              <div class="kicker">Coordina tu evaluación</div>
-              <h2 class="section-title">Agenda una llamada estratégica</h2>
+              <div class="kicker">Cuéntanos sobre tu proyecto</div>
+              <h2 class="section-title">Solicita una evaluación personalizada</h2>
               <p>
                 En una llamada de 30 minutos evaluamos qué procesos puedes automatizar,
                 qué sistema necesita tu empresa y qué solución puede darte más control,
@@ -1492,11 +1557,32 @@
             </a>
           </div>
 
-          <div class="calendly-shell">
-            <div
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/aiprops/30min?timezone=America%2FPuerto_Rico&primary_color=ff6b00&text_color=061426&hide_gdpr_banner=1"
-            ></div>
+          <div class="lead-panel">
+            <div class="lead-heading"><span class="lead-badge">01 · Cuéntanos sobre tu empresa</span><h3>Hablemos de lo que necesitas</h3><p>Completa este formulario y recibirás una confirmación por correo. Luego, si deseas, puedes escoger una fecha disponible para reunirnos.</p></div>
+            <form id="aipropsLeadForm" class="lead-form" novalidate>
+              <div class="lead-honeypot" aria-hidden="true"><label>Sitio web<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+              <label>Nombre y apellido *<input name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Tu nombre completo"></label>
+              <label>Correo electrónico *<input name="email" type="email" autocomplete="email" required maxlength="180" placeholder="nombre@empresa.com"></label>
+              <label>Teléfono / WhatsApp *<input name="phone" type="tel" autocomplete="tel" required maxlength="35" placeholder="787-000-0000"></label>
+              <label>Empresa o negocio *<input name="business" type="text" required maxlength="150" placeholder="Nombre de tu negocio"></label>
+              <label>Industria *<select name="industry" required><option value="">Selecciona una industria</option><option>Comercio / ventas</option><option>Distribución / suplidores</option><option>Dealer / automotriz</option><option>Oficina legal / servicios profesionales</option><option>Restaurantes / alimentos</option><option>Construcción / contratistas</option><option>Salud / bienestar</option><option>Contabilidad / finanzas</option><option>Otra industria</option></select></label>
+              <label>Solución de interés *<select name="solution" id="leadSolution" required><option value="">Selecciona una solución</option><option>QuoteFlow Pro</option><option>AutoSales Pro</option><option>LegalOps Pro</option><option>RetailControl Pro</option><option>ReconciliationHub Pro</option><option>Business ERP Pro</option><option>Automatización personalizada</option><option>Sistema a la medida / todavía no estoy seguro</option></select></label>
+              <label class="lead-full">¿Qué proceso quieres mejorar o qué problema necesitas resolver? *<textarea name="challenge" rows="4" required minlength="15" maxlength="2000" placeholder="Cuéntanos brevemente cómo trabajas hoy, qué te toma tiempo y qué quisieras automatizar..."></textarea></label>
+              <label class="lead-full">¿Qué herramientas utilizas actualmente?<input name="tools" maxlength="250" placeholder="Excel, sistema actual, papel, Microsoft 365, etc. (opcional)"></label>
+              <label>¿Cuándo te gustaría comenzar?<select name="timeline"><option value="">Selecciona (opcional)</option><option>Lo antes posible</option><option>Dentro de 30 días</option><option>En 1 a 3 meses</option><option>Solo estoy explorando</option></select></label>
+              <label>Preferencia de contacto<select name="contactPreference"><option>Correo electrónico</option><option>WhatsApp / llamada</option><option>Reunión por Calendly</option></select></label>
+              <label class="lead-full lead-consent"><input type="checkbox" name="consent" required><span>Autorizo a AIProps a utilizar esta información para responder a mi solicitud y coordinar una evaluación. He leído la <a href="politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a>. *</span></label>
+              <div class="lead-full lead-actions"><button type="submit" class="btn btn-primary" id="leadSubmitBtn">Enviar solicitud →</button><span id="leadStatus" role="status" aria-live="polite"></span></div>
+            </form>
+          </div>
+          <div id="leadSuccess" class="lead-success" hidden tabindex="-1">
+            <span class="lead-badge">02 · Solicitud recibida</span><h3>¡Gracias por comunicarte con AIProps!</h3>
+            <p id="leadSuccessCopy">Te enviamos una confirmación por correo. Revisaremos tu solicitud para comunicarnos contigo.</p>
+            <p><strong>¿Prefieres elegir una fecha de una vez?</strong> Puedes ver nuestra disponibilidad y seleccionar un espacio. No necesitas volver a escribir tus datos.</p>
+            <button type="button" class="btn btn-primary" id="openCalendly">Ver fechas disponibles →</button>
+            <a class="lead-secondary" id="calendlyFallback" href="https://calendly.com/aiprops/30min" target="_blank" rel="noopener">Abrir Calendly en otra pestaña ↗</a>
+            <div id="calendlyAfterLead" class="lead-calendar" hidden></div>
+            <p class="lead-footnote">La solicitud no reserva una cita automáticamente. Una reunión queda confirmada solo cuando completas la selección en Calendly.</p>
           </div>
 
         </div>
@@ -1519,7 +1605,7 @@
       <div class="footer-links">
         <a href="#servicios">Servicios</a>
         <a href="#soluciones">Soluciones</a>
-        <a href="#agenda">Agenda</a>
+        <a href="#agenda">Contacto</a>
         <a href="tel:+17874788885">787-478-8885</a>
         <a href="mailto:soluciones@aiprops.online">Email</a>
         <a href="https://wa.me/17874788885" target="_blank" rel="noopener">WhatsApp</a>
@@ -1538,11 +1624,7 @@
     ☎
   </a>
 
-  <script
-    type="text/javascript"
-    src="https://assets.calendly.com/assets/external/widget.js"
-    async>
-  </script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
   <script>
     const menuBtn = document.getElementById("menuBtn");
@@ -1561,5 +1643,69 @@
     });
   </script>
 
+
+<script>
+// AIProps Solutions Lab: para activar un video, colocar assets/demos/{id}.mp4 y cambiar su propiedad video.
+(function(){
+ const demos={
+ legalops:{name:'LegalOps Pro V3',description:'Expedientes, tareas, documentos, bitácoras y reportes financieros por caso.',video:'assets/demos/legalops.mp4'},
+ quoteflow:{name:'QuoteFlow Pro V4',description:'Cotizaciones, facturación, inventario, compras, cobros y control financiero.',video:'assets/demos/quoteflow.mp4'},
+ autosales:{name:'AutoSales Pro V2',description:'Vehículos, costos de adquisición, preparación, ventas, cobros y márgenes.',video:'assets/demos/autosales.mp4'},
+ retail:{name:'RetailControl Pro V2',description:'Compras, inventario, devoluciones, proveedores y reportes.',video:'assets/demos/retail.mp4'},
+ reconciliation:{name:'ReconciliationHub Pro V2',description:'Cierres diarios, conciliaciones, evidencia, revisiones y auditoría.',video:'assets/demos/reconciliation.mp4'},
+ erp:{name:'Business ERP V2',description:'Ventas, compras, inventario, cuentas por cobrar y pagar y reportes.',video:'assets/demos/erp.mp4'}
+ };
+ const dialog=document.getElementById('labVideoDialog');if(!dialog)return;
+ const holder=document.getElementById('labVideoHolder');
+ document.querySelectorAll('.lab-filter').forEach(btn=>btn.addEventListener('click',()=>{
+   const f=btn.dataset.filter;
+   document.querySelectorAll('.lab-filter').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+   document.querySelectorAll('.lab-card').forEach(card=>{card.hidden=f!=='todos'&&card.dataset.category!==f;});
+ }));
+ document.querySelectorAll('[data-demo]').forEach(btn=>btn.addEventListener('click',()=>{
+   const data=demos[btn.dataset.demo];if(!data)return;
+   document.getElementById('labDialogTitle').textContent=data.name;
+   document.getElementById('labDialogCopy').textContent=data.description+' Solicita una evaluación para conversar sobre una solución adaptada a tu negocio.';
+   holder.replaceChildren();
+   if(data.video){const video=document.createElement('video');video.controls=true;video.preload='none';video.playsInline=true;video.poster='assets/demos/'+btn.dataset.demo+'-poster.jpg';video.src=data.video;holder.append(video);}
+   else{const placeholder=document.createElement('div');placeholder.className='lab-placeholder';placeholder.innerHTML='<span class="play" aria-hidden="true">▶</span><strong>Demostración en preparación</strong><span>Próximamente publicaremos el video funcional de esta solución.</span>';holder.append(placeholder);}
+   if(dialog.showModal)dialog.showModal();
+ }));
+ document.getElementById('labDialogClose').addEventListener('click',()=>dialog.close());
+ document.getElementById('labDialogCta').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
+ dialog.addEventListener('close',()=>{const video=holder.querySelector('video');if(video)video.pause()});
+})();
+</script>
+
+<script>
+(function(){
+  const form=document.getElementById('aipropsLeadForm');if(!form)return;
+  const $=id=>document.getElementById(id),calendlyUrl='https://calendly.com/aiprops/30min';let saved={};
+  const map={quoteflow:'QuoteFlow Pro',autosales:'AutoSales Pro',legalops:'LegalOps Pro',retail:'RetailControl Pro',reconciliation:'ReconciliationHub Pro',erp:'Business ERP Pro'};
+  const qs=new URLSearchParams(location.search);if(map[qs.get('solution')])$('leadSolution').value=map[qs.get('solution')];
+  document.querySelectorAll('.lab-card .lab-action.main').forEach(a=>{const slug=(a.getAttribute('href').split('/').filter(Boolean).pop());if(map[slug])a.href=a.href;});
+  document.querySelectorAll('[data-demo]').forEach(button=>button.addEventListener('click',()=>{if(map[button.dataset.demo])$('leadSolution').value=map[button.dataset.demo]}));
+  form.addEventListener('submit',async(event)=>{
+    event.preventDefault();const status=$('leadStatus');if(!form.reportValidity())return;
+    const data=Object.fromEntries(new FormData(form).entries());if(data.consent!=='on'){status.textContent='Debes autorizar el contacto.';return}
+    const btn=$('leadSubmitBtn');btn.disabled=true;status.textContent='Enviando tu solicitud...';
+    try{
+      const response=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      const result=await response.json().catch(()=>({}));if(!response.ok)throw new Error(result.error||'No se pudo enviar la solicitud.');
+      saved={name:data.name,email:data.email};form.closest('.lead-panel').hidden=true;$('leadSuccess').hidden=false;
+      $('leadSuccessCopy').textContent=result.confirmationSent?'Recibirás un correo de confirmación con los detalles y un enlace para elegir una fecha. También puedes escogerla aquí.':'Recibimos tu solicitud. Puedes elegir una fecha aquí; si no recibes el correo de confirmación, revisa tu carpeta de correo no deseado o comunícate con nosotros.';
+      $('leadSuccess').focus();
+    }catch(err){status.textContent=err.message+' También puedes escribir a soluciones@aiprops.online.'}finally{btn.disabled=false}
+  });
+  $('openCalendly').addEventListener('click',()=>{
+    const holder=$('calendlyAfterLead');holder.hidden=false;holder.scrollIntoView({behavior:'smooth',block:'center'});
+    if(holder.dataset.loaded)return;
+    if(window.Calendly&&typeof window.Calendly.initInlineWidget==='function'){
+      window.Calendly.initInlineWidget({url:calendlyUrl,parentElement:holder,prefill:{name:saved.name,email:saved.email},utm:{utmSource:'aiprops_web',utmMedium:'formulario',utmCampaign:'evaluacion'}});holder.dataset.loaded='1';
+    }else{holder.innerHTML='<p style="padding:24px;color:#233">El calendario no cargó. Usa el enlace para abrir Calendly en otra pestaña.</p>'}
+  });
+})();
+</script>
 </body>
 </html>
