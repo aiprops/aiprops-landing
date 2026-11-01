@@ -246,9 +246,10 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.03fr 0.97fr;
-      gap: 48px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
       align-items: center;
+      max-width: 1100px;
     }
 
     .hero h1 {
@@ -269,7 +270,7 @@
       color: var(--text);
       font-size: clamp(17px, 2vw, 21px);
       line-height: 1.65;
-      max-width: 680px;
+      max-width: 900px;
     }
 
     .hero-cta {
@@ -284,7 +285,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
-      max-width: 720px;
+      max-width: 900px;
     }
 
     .stat {
@@ -306,199 +307,6 @@
       color: var(--muted);
       font-size: 13px;
       line-height: 1.35;
-    }
-
-    .visual {
-      position: relative;
-      min-height: 570px;
-    }
-
-    .dashboard-card {
-      position: absolute;
-      top: 14px;
-      right: 0;
-      width: min(100%, 610px);
-      padding: 18px;
-      border-radius: 30px;
-      border: 1px solid rgba(35, 213, 238, 0.28);
-      background:
-        radial-gradient(circle at top left, rgba(15, 185, 216, 0.16), transparent 35%),
-        linear-gradient(180deg, rgba(11, 39, 69, 0.96), rgba(3, 12, 25, 0.98));
-      box-shadow: var(--shadow), 0 0 80px rgba(15, 185, 216, 0.12);
-      transform: perspective(1200px) rotateY(-7deg) rotateX(3deg);
-    }
-
-    .dash-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-
-    .dash-logo img {
-      width: 86px;
-      height: auto;
-    }
-
-    .dash-dots {
-      display: flex;
-      gap: 8px;
-    }
-
-    .dash-dots i {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--cyan);
-    }
-
-    .dash-dots i:nth-child(2) {
-      background: var(--orange);
-    }
-
-    .dash-dots i:nth-child(3) {
-      background: rgba(255, 255, 255, 0.35);
-    }
-
-    .kpis {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-
-    .kpi {
-      padding: 14px;
-      border-radius: 18px;
-      min-height: 90px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-    }
-
-    .kpi small {
-      display: block;
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .kpi b {
-      display: block;
-      margin-top: 8px;
-      font-size: 22px;
-    }
-
-    .kpi em {
-      display: block;
-      margin-top: 5px;
-      font-size: 11px;
-      color: #4ade80;
-      font-style: normal;
-    }
-
-    .dash-main {
-      margin-top: 12px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 12px;
-    }
-
-    .panel {
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      min-height: 180px;
-      overflow: hidden;
-    }
-
-    .panel h4 {
-      margin-bottom: 14px;
-      font-size: 13px;
-    }
-
-    .chart {
-      height: 118px;
-      border-radius: 15px;
-      background:
-        linear-gradient(to top, rgba(15, 185, 216, 0.12), transparent),
-        repeating-linear-gradient(to top, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 24px);
-      position: relative;
-    }
-
-    .chart svg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .flow-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .flow-item {
-      padding: 12px;
-      border-radius: 14px;
-      background: rgba(15, 185, 216, 0.1);
-      border: 1px solid rgba(35, 213, 238, 0.2);
-      color: #dffbff;
-      font-size: 12px;
-      font-weight: 750;
-    }
-
-    .phone-card {
-      position: absolute;
-      right: 28px;
-      bottom: 16px;
-      width: 215px;
-      padding: 12px;
-      border-radius: 32px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background: #071829;
-      box-shadow: var(--shadow);
-      transform: rotate(5deg);
-    }
-
-    .phone-screen {
-      border-radius: 24px;
-      min-height: 370px;
-      padding: 18px;
-      background:
-        radial-gradient(circle at top, rgba(15, 185, 216, 0.28), transparent 30%),
-        linear-gradient(180deg, #0a2745, #040b17);
-    }
-
-    .phone-screen small {
-      color: var(--muted);
-      font-weight: 800;
-    }
-
-    .phone-screen h3 {
-      margin-top: 10px;
-      font-size: 30px;
-      letter-spacing: -1px;
-    }
-
-    .phone-chart {
-      height: 82px;
-      margin-top: 18px;
-      border-radius: 16px;
-      background:
-        linear-gradient(to top, rgba(15, 185, 216, 0.15), transparent),
-        repeating-linear-gradient(to top, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 22px);
-    }
-
-    .floating-chip {
-      position: absolute;
-      left: -6px;
-      bottom: 88px;
-      padding: 15px 18px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, var(--orange), var(--orange-2));
-      box-shadow: 0 20px 55px rgba(255, 107, 0, 0.34);
-      font-weight: 950;
-      z-index: 4;
     }
 
     /* SECTIONS */
@@ -909,20 +717,6 @@
         grid-template-columns: 1fr;
       }
 
-      .visual {
-        min-height: 630px;
-      }
-
-      .dashboard-card {
-        width: 100%;
-        transform: none;
-      }
-
-      .phone-card {
-        right: 8px;
-        bottom: 0;
-      }
-
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -963,38 +757,6 @@
       .hero-cta .btn,
       .agenda-top .btn {
         width: 100%;
-      }
-
-      .visual {
-        min-height: auto;
-      }
-
-      .dashboard-card {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin-top: 20px;
-        padding: 12px;
-      }
-
-      .kpis {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .dash-main {
-        grid-template-columns: 1fr;
-      }
-
-      .phone-card {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin: 22px auto 0;
-        transform: none;
-      }
-
-      .floating-chip {
-        display: none;
       }
 
       .agenda-box {
@@ -1102,14 +864,6 @@
     <div class="mobile-panel" id="mobilePanel">
       <a href="#servicios">Servicios</a>
       <a href="#soluciones">Soluciones</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#agenda">Solicitar evaluación</a>
-      <a href="tel:+17874788885">Llamar: 787-478-8885</a>
-      <a href="mailto:soluciones@aiprops.online">Email: soluciones@aiprops.online</a>
-      <a href="https://wa.me/17874788885" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-    <div class="mobile-panel" id="mobilePanel">
-      <a href="#servicios">Servicios</a>
-      <a href="#soluciones">Soluciones</a>
       <a href="#demo-lab">Demo Lab</a>
       <a href="#proceso">Proceso</a>
       <a href="#agenda">Solicitar evaluación</a>
@@ -1174,89 +928,6 @@
           </div>
         </div>
 
-        <div class="visual" aria-hidden="true">
-
-          <div class="dashboard-card">
-            <div class="dash-top">
-              <div class="dash-logo">
-                <img src="assets/logo.png" alt="">
-              </div>
-
-              <div class="dash-dots">
-                <i></i><i></i><i></i>
-              </div>
-            </div>
-
-            <div class="kpis">
-              <div class="kpi">
-                <small>Ventas del mes</small>
-                <b>$128K</b>
-                <em>+18.5%</em>
-              </div>
-
-              <div class="kpi">
-                <small>Procesos activos</small>
-                <b>42</b>
-                <em>+12%</em>
-              </div>
-
-              <div class="kpi">
-                <small>Clientes</small>
-                <b>1,452</b>
-                <em>+9.8%</em>
-              </div>
-
-              <div class="kpi">
-                <small>Tareas</small>
-                <b>76</b>
-                <em>-35% manual</em>
-              </div>
-            </div>
-
-            <div class="dash-main">
-              <div class="panel">
-                <h4>Reportes y visibilidad</h4>
-                <div class="chart">
-                  <svg viewBox="0 0 500 160" preserveAspectRatio="none">
-                    <path d="M0 118 C55 98 85 108 130 78 C180 44 220 95 270 62 C315 32 355 52 395 28 C440 6 470 26 500 14"
-                      fill="none" stroke="#0fb9d8" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M0 134 C60 126 90 122 132 96 C190 66 220 110 270 82 C328 52 370 76 410 48 C450 30 475 40 500 32"
-                      fill="none" stroke="#ff6b00" stroke-width="6" stroke-linecap="round" opacity=".95"/>
-                  </svg>
-                </div>
-              </div>
-
-              <div class="panel">
-                <h4>Flujo automatizado</h4>
-                <div class="flow-grid">
-                  <div class="flow-item">Formulario</div>
-                  <div class="flow-item">Datos</div>
-                  <div class="flow-item">Validación</div>
-                  <div class="flow-item">Reporte</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="phone-card">
-            <div class="phone-screen">
-              <small>Dashboard móvil</small>
-              <h3>$42,850</h3>
-              <div class="phone-chart"></div>
-
-              <div style="margin-top:18px;display:grid;gap:10px;">
-                <div class="flow-item">Clientes: 248</div>
-                <div class="flow-item">Órdenes: 96</div>
-                <div class="flow-item">Pendientes: 12</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="floating-chip">
-            ⚡ Automatización activa
-          </div>
-
-        </div>
       </div>
     </section>
 
@@ -1710,6 +1381,3 @@
 </script>
 </body>
 </html>
-.visual:has(.dashboard-card) {
-    display: none !important;
-}
