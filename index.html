@@ -1,22 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '830304682058779');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=830304682058779&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -862,6 +845,8 @@ html{scroll-padding-top:85px}
 @media(max-width:850px){.express-layout{grid-template-columns:1fr;gap:13px}.express-intro{padding:8px 0 0}.need-options{margin-top:15px}.lead-form{grid-template-columns:1fr}.lead-form .lead-full{grid-column:1}.hero-stats{display:none}.hero{padding:40px 0 20px}.hero h1{font-size:clamp(34px,8vw,53px)}.hero p{font-size:16px;line-height:1.5}.hero-cta{margin-top:17px}.hero-cta .btn{width:100%}.express-section{padding:20px 0 48px}.express-form-col .lead-panel{padding:22px 17px}.welcome-section{padding:38px 0}#servicios,#soluciones{padding:45px 0}.card{min-height:0;padding:20px}.industry{min-height:0;padding:18px}.lab-section{padding:55px 0}}
 @media(max-width:640px){.need-options{gap:8px}.need-choice{padding:12px 9px;font-size:13px;min-height:60px}.need-choice:last-child{grid-column:1/-1}.mobile-convert-cta{display:flex;position:fixed;z-index:120;bottom:0;left:0;right:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(4,14,28,.96);border-top:1px solid rgba(35,213,238,.3);align-items:center;justify-content:center;font-weight:900;color:#fff;text-decoration:none}.mobile-convert-cta span{background:#ff6b00;padding:12px 25px;text-align:center;border-radius:12px;width:100%;max-width:500px}.floating-whatsapp{bottom:83px;right:14px;width:49px;height:49px;font-size:22px}body{padding-bottom:65px}.lead-success,.lead-panel{scroll-margin-top:95px}}
 </style>
+  <!-- Pixel se carga solo tras consentimiento explicito -->
+  <script defer src="assets/meta-pixel-consent.js"></script>
 </head>
 
 <body>
@@ -1383,6 +1368,7 @@ html{scroll-padding-top:85px}
     try{
       const response=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
       const result=await response.json().catch(()=>({}));if(!response.ok)throw new Error(result.error||'No se pudo enviar la solicitud.');
+      if(window.AIPropsMeta) window.AIPropsMeta.trackLead();
       saved={name:data.name,email:data.email};form.closest('.lead-panel').hidden=true;$('leadSuccess').hidden=false;
       $('leadSuccessCopy').textContent=result.confirmationSent?'Recibirás un correo de confirmación con los detalles y un enlace para elegir una fecha. También puedes escogerla aquí.':'Recibimos tu solicitud. Puedes elegir una fecha aquí; si no recibes el correo de confirmación, revisa tu carpeta de correo no deseado o comunícate con nosotros.';
       $('leadSuccess').focus();
