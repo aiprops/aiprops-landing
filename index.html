@@ -826,6 +826,25 @@
 .lab-video-holder video{max-width:100%;height:auto}
 @media(max-width:800px){.welcome-layout{grid-template-columns:1fr}.welcome-section{padding:46px 0}}
 </style>
+<style>
+/* AIProps Conversion V2 — enfoque mobile-first */
+html{scroll-padding-top:85px}
+.hero{padding:60px 0 34px}.hero h1{font-size:clamp(36px,5.6vw,67px);line-height:1.04;letter-spacing:-2px}.hero p{max-width:650px;margin-top:18px}.hero-cta{margin-top:22px}
+.hero-stats{margin-top:24px}
+.express-section{padding:32px 0 70px;scroll-margin-top:85px}
+.express-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:28px}
+.express-intro{padding:30px 8px 20px 0}.express-intro h2{font-size:clamp(30px,4vw,50px);line-height:1.08;letter-spacing:-1px}.express-intro h2 span{color:#23d5ee}
+.express-intro>p{margin:15px 0;color:#b5ccdf;line-height:1.6}.need-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.need-choice{cursor:pointer;text-align:left;display:flex;align-items:center;gap:9px;padding:14px;min-height:66px;color:#e8f5ff;background:linear-gradient(145deg,#123150,#071b30);border:1px solid rgba(35,213,238,.25);border-radius:14px;font:700 .88rem/1.3 inherit;transition:border-color .2s,background .2s}
+.need-choice:hover,.need-choice[aria-pressed=true]{border-color:#ff8a1c;background:linear-gradient(145deg,#184766,#10243b)}
+.express-note{font-size:.87rem!important}
+.express-form-col .lead-panel{margin-top:0}.express-form-col .lead-success{margin-top:0}.lead-form{gap:13px}.lead-form label{font-size:13px}
+.lead-form input:not([type=checkbox]),.lead-form select,.lead-form textarea{font-size:16px;min-height:47px;padding:11px 13px}
+.field-optional{font-weight:400;color:#9cb4c3}.lead-actions button{width:100%;white-space:normal}.lead-footnote{font-size:12px;color:#a5bdc9}
+.mobile-convert-cta{display:none}.mobile-convert-cta[hidden]{display:none!important}
+@media(max-width:850px){.express-layout{grid-template-columns:1fr;gap:13px}.express-intro{padding:8px 0 0}.need-options{margin-top:15px}.lead-form{grid-template-columns:1fr}.lead-form .lead-full{grid-column:1}.hero-stats{display:none}.hero{padding:40px 0 20px}.hero h1{font-size:clamp(34px,8vw,53px)}.hero p{font-size:16px;line-height:1.5}.hero-cta{margin-top:17px}.hero-cta .btn{width:100%}.express-section{padding:20px 0 48px}.express-form-col .lead-panel{padding:22px 17px}.welcome-section{padding:38px 0}#servicios,#soluciones{padding:45px 0}.card{min-height:0;padding:20px}.industry{min-height:0;padding:18px}.lab-section{padding:55px 0}}
+@media(max-width:640px){.need-options{gap:8px}.need-choice{padding:12px 9px;font-size:13px;min-height:60px}.need-choice:last-child{grid-column:1/-1}.mobile-convert-cta{display:flex;position:fixed;z-index:120;bottom:0;left:0;right:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(4,14,28,.96);border-top:1px solid rgba(35,213,238,.3);align-items:center;justify-content:center;font-weight:900;color:#fff;text-decoration:none}.mobile-convert-cta span{background:#ff6b00;padding:12px 25px;text-align:center;border-radius:12px;width:100%;max-width:500px}.floating-whatsapp{bottom:83px;right:14px;width:49px;height:49px;font-size:22px}body{padding-bottom:65px}.lead-success,.lead-panel{scroll-margin-top:95px}}
+</style>
 </head>
 
 <body>
@@ -885,29 +904,26 @@
           </div>
 
           <h1>
-            Soluciones
-            <span class="accent">digitales</span>
-            <span class="orange">para negocios</span>
+            Menos trabajo manual
+            <span class="accent">más control</span>
+            <span class="orange">para tu negocio</span>
           </h1>
 
           <p>
-            Creamos sistemas inteligentes que se adaptan a tu negocio, no al revés.
-            Ayudamos a empresas a salir del revolú operativo, eliminar procesos manuales
-            y operar con más control, claridad y eficiencia real.
+            Automatizamos cotizaciones, inventario, facturación y procesos empresariales.
+            Cuéntanos qué necesitas mejorar y exploremos una solución adaptada a tu empresa.
           </p>
 
           <div class="hero-cta">
             <a class="btn btn-primary" href="#agenda">
-              Solicitar evaluación →
+              Quiero mejorar mi negocio →
             </a>
 
-            <a class="btn btn-secondary" href="https://wa.me/17874788885" target="_blank" rel="noopener">
-              WhatsApp
+            <a class="btn btn-secondary" href="#demo-lab">
+              Ver sistemas
             </a>
 
-            <a class="btn btn-secondary" href="mailto:soluciones@aiprops.online">
-              Email
-            </a>
+
           </div>
 
           <div class="hero-stats">
@@ -931,7 +947,64 @@
       </div>
     </section>
 
+    <section id="agenda" class="agenda-section express-section">
+      <div class="container express-layout">
+        <div class="express-intro">
+          <span class="lab-kicker">✦ EVALUACIÓN PERSONALIZADA</span>
+          <h2>¿Qué necesitas <span>mejorar?</span></h2>
+          <p>Selecciona el área que más trabajo te causa. No necesitas conocer nuestros sistemas para empezar.</p>
+          <div class="need-options" role="group" aria-label="Selecciona qué quieres mejorar">
+            <button type="button" class="need-choice" data-need="Cotizaciones y facturación">🧾 <span>Cotizaciones y facturación</span></button>
+            <button type="button" class="need-choice" data-need="Inventario y ventas">📦 <span>Inventario y ventas</span></button>
+            <button type="button" class="need-choice" data-need="Automatización de procesos">⚙️ <span>Procesos manuales</span></button>
+            <button type="button" class="need-choice" data-need="Organización y reportes">📊 <span>Organización y reportes</span></button>
+            <button type="button" class="need-choice" data-need="Otra necesidad">✨ <span>Otra necesidad</span></button>
+          </div>
+          <p class="express-note">También diseñamos soluciones a la medida para distintas industrias.</p>
+        </div>
+        <div class="express-form-col">
+          <div class="lead-panel" id="leadPanel">
+            <div class="lead-heading"><span class="lead-badge">Toma menos de un minuto</span><h3>Hablemos de tu negocio</h3><p>Déjanos tus datos y nos comunicaremos para conocer lo que necesitas.</p></div>
+            <form id="aipropsLeadForm" class="lead-form" novalidate>
+              <div class="lead-honeypot" aria-hidden="true"><label>Sitio web<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+              <input type="hidden" name="need" id="leadNeed" value="">
+              <input type="hidden" name="industry" value="">
+              <input type="hidden" name="tools" value="">
+              <input type="hidden" name="timeline" value="">
+              <input type="hidden" name="contactPreference" value="Correo electrónico">
+              <label>Tu nombre *<input name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Nombre y apellido"></label>
+              <label>Correo electrónico *<input name="email" type="email" autocomplete="email" required maxlength="180" placeholder="tucorreo@ejemplo.com"></label>
+              <label>Nombre del negocio <span class="field-optional">(opcional)</span><input name="business" type="text" maxlength="150" placeholder="Tu empresa o proyecto"></label>
+              <label>WhatsApp <span class="field-optional">(opcional)</span><input name="phone" type="tel" autocomplete="tel" maxlength="35" placeholder="787-000-0000"></label>
+              <label class="lead-full">¿Qué solución te interesa? <span class="field-optional">(opcional)</span><select name="solution" id="leadSolution"><option value="">Aún no estoy seguro/a</option><option>QuoteFlow Pro</option><option>AutoSales Pro</option><option>LegalOps Pro</option><option>RetailControl Pro</option><option>ReconciliationHub Pro</option><option>Business ERP Pro</option><option>Automatización personalizada</option><option>Sistema a la medida / todavía no estoy seguro</option></select></label>
+              <label class="lead-full">Cuéntanos brevemente <span class="field-optional">(opcional)</span><textarea name="challenge" rows="2" maxlength="2000" placeholder="¿Qué proceso te gustaría mejorar?"></textarea></label>
+              <label class="lead-full lead-consent"><input type="checkbox" name="consent" required><span>Autorizo a AIProps a contactarme sobre esta solicitud. Consulta la <a href="politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a>. *</span></label>
+              <div class="lead-full lead-actions"><button type="submit" class="btn btn-primary" id="leadSubmitBtn">Solicitar evaluación →</button><span id="leadStatus" role="status" aria-live="polite"></span></div>
+              <p class="lead-full lead-footnote">Sin reserva automática: podrás seleccionar una reunión después de enviar.</p>
+            </form>
+          </div>
+          <div id="leadSuccess" class="lead-success" hidden tabindex="-1">
+            <span class="lead-badge">02 · Solicitud recibida</span><h3>¡Gracias por comunicarte con AIProps!</h3>
+            <p id="leadSuccessCopy">Te enviamos una confirmación por correo. Revisaremos tu solicitud para comunicarnos contigo.</p>
+            <p><strong>¿Prefieres elegir una fecha de una vez?</strong> Puedes ver nuestra disponibilidad y seleccionar un espacio. No necesitas volver a escribir tus datos.</p>
+            <button type="button" class="btn btn-primary" id="openCalendly">Ver fechas disponibles →</button>
+            <a class="lead-secondary" id="calendlyFallback" href="https://calendly.com/aiprops/30min" target="_blank" rel="noopener">Abrir Calendly en otra pestaña ↗</a>
+            <div id="calendlyAfterLead" class="lead-calendar" hidden></div>
+            <p class="lead-footnote">La solicitud no reserva una cita automáticamente. Una reunión queda confirmada solo cuando completas la selección en Calendly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <section id="bienvenida" class="welcome-section"><div class="container welcome-layout"><div class="welcome-copy"><span class="lab-kicker">✦ CONOCE A AIPROPS</span><h2>TECNOLOGÍA QUE SE <span>ADAPTA A TU NEGOCIO.</span></h2><p>Conoce quién está detrás de AIProps, cómo trabajamos y cómo explorar las soluciones demostrativas. Cada negocio es diferente: el sistema se diseña alrededor de sus procesos.</p><a class="welcome-cta" href="#demo-lab">Explorar las 6 soluciones ↗</a></div><div class="welcome-media"><video controls preload="metadata" playsinline poster="assets/demos/intro-poster.jpg" aria-label="Video de presentación de AIProps"><source src="assets/demos/intro.mp4" type="video/mp4">Tu navegador no soporta video HTML5.</video><small>Presentación personal de AIProps · 1:16 · Pulsa reproducir para comenzar</small></div></div></section>
+
+
+
+<!-- AIProps Solutions Lab: biblioteca audiovisual (sin videos inventados) -->
+<section id="demo-lab" class="lab-section" aria-labelledby="lab-heading"><div class="container"><div class="lab-kicker">✦ AIProps / Solutions Lab</div><h2 class="lab-title" id="lab-heading">NO SOLO LO DECIMOS. <span>TE MOSTRAMOS LO QUE CONSTRUIMOS.</span></h2><p class="lab-desc">Explora soluciones digitales para empresas. Cada sistema puede adaptarse a tu operación, industria y flujo de trabajo. Conoce sistemas adaptables a diferentes empresas. Mira los siete videos comerciales y descubre soluciones configurables según las necesidades de cada negocio.</p><div class="lab-stats"><span><strong>06</strong> soluciones destacadas</span><span><strong>07</strong> videos disponibles · <strong>01</strong> objetivo: transformar tu operación</span></div><div class="lab-filters" role="group" aria-label="Filtrar soluciones"><button type="button" class="lab-filter" data-filter="todos" aria-pressed="true">Todos</button><button type="button" class="lab-filter" data-filter="ventas" aria-pressed="false">Ventas</button><button type="button" class="lab-filter" data-filter="inventario" aria-pressed="false">Inventario</button><button type="button" class="lab-filter" data-filter="contabilidad" aria-pressed="false">Contabilidad</button><button type="button" class="lab-filter" data-filter="legal" aria-pressed="false">Legal</button><button type="button" class="lab-filter" data-filter="operaciones" aria-pressed="false">Operaciones</button></div><div class="lab-grid"><article class="lab-card" data-category="legal"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">⚖</div>
+</div><div class="lab-body"><span class="lab-type">Gestión legal</span><h3>LegalOps Pro</h3><p>Clientes, casos, documentos y vencimientos.</p><div class="lab-tags">Expedientes · Tareas · Calendario</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="legalops" aria-label="Ver presentación de LegalOps">▶ Ver video</button><a class="lab-action main" href="soluciones/legalops/" aria-label="Conocer detalles de LegalOps">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="ventas"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▤</div></div><div class="lab-body"><span class="lab-type">Cotización y ventas</span><h3>QuoteFlow Pro</h3><p>Cotizaciones, facturación, inventario y cobros. Demo real en una ferretería; adaptable a otros comercios.</p><div class="lab-tags">Cotizaciones · Facturas · Reportes</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="quoteflow" aria-label="Reproducir video comercial QuoteFlow Pro">▶ Ver video</button><a class="lab-action main" href="soluciones/quoteflow/" aria-label="Conocer QuoteFlow Pro">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">🚘</div></div><div class="lab-body"><span class="lab-type">Dealers de autos</span><h3>AutoSales Pro</h3><p>Inventario de unidades, costos acumulados, ventas y márgenes.</p><div class="lab-tags">Vehículos · Costos · Rentabilidad</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="autosales" aria-label="Ver presentación de AutoSales Pro">▶ Ver video</button><a class="lab-action main" href="soluciones/autosales/" aria-label="Conocer detalles de AutoSales Pro">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▦</div></div><div class="lab-body"><span class="lab-type">Comercio e inventario</span><h3>RetailControl Pro</h3><p>Compras, proveedores, existencias y alertas de reposición.</p><div class="lab-tags">Inventario · Alertas · Compras</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="retail" aria-label="Ver presentación de RetailControl">▶ Ver video</button><a class="lab-action main" href="soluciones/retail/" aria-label="Conocer detalles de RetailControl">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="contabilidad"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">≋</div></div><div class="lab-body"><span class="lab-type">Contabilidad y control</span><h3>ReconciliationHub Pro</h3><p>Cierres diarios, diferencias, aprobaciones e historial auditable.</p><div class="lab-tags">Cuadres · Validación · Auditoría</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="reconciliation" aria-label="Ver presentación de ReconciliationHub">▶ Ver video</button><a class="lab-action main" href="soluciones/reconciliation/" aria-label="Conocer detalles de ReconciliationHub">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="operaciones"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">◈</div></div><div class="lab-body"><span class="lab-type">Operación empresarial</span><h3>Business ERP Pro</h3><p>Clientes, cotizaciones, facturas, inventario e indicadores.</p><div class="lab-tags">Operaciones · Finanzas · Reportes</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="erp" aria-label="Ver presentación de Business ERP">▶ Ver video</button><a class="lab-action main" href="soluciones/erp/" aria-label="Conocer detalles de Business ERP">Conocer más ↗</a></div></div></article></div><p class="lab-note">Las tarjetas muestran conceptos de sistemas personalizables. Los videos muestran prototipos funcionales de demostración, con datos ficticios. Cada implementación empresarial se diseña y valida según sus requerimientos.</p></div></section>
+<dialog class="lab-video-dialog" id="labVideoDialog" aria-labelledby="labDialogTitle"><div class="lab-dialog-content"><div class="lab-dialog-top"><h2 class="lab-dialog-title" id="labDialogTitle">Demostración</h2><button type="button" class="lab-dialog-close" id="labDialogClose" aria-label="Cerrar demostración">✕ Cerrar</button></div><div id="labVideoHolder"></div><p class="lab-dialog-copy" id="labDialogCopy"></p><a class="lab-dialog-cta" href="#agenda" id="labDialogCta">Solicitar información →</a></div></dialog>
+
     <section id="servicios">
       <div class="container">
         <div class="section-head">
@@ -1088,12 +1161,6 @@
       </div>
     </section>
 
-
-<!-- AIProps Solutions Lab: biblioteca audiovisual (sin videos inventados) -->
-<section id="demo-lab" class="lab-section" aria-labelledby="lab-heading"><div class="container"><div class="lab-kicker">✦ AIProps / Solutions Lab</div><h2 class="lab-title" id="lab-heading">NO SOLO LO DECIMOS. <span>TE MOSTRAMOS LO QUE CONSTRUIMOS.</span></h2><p class="lab-desc">Explora soluciones digitales para empresas. Cada sistema puede adaptarse a tu operación, industria y flujo de trabajo. Conoce sistemas adaptables a diferentes empresas. Mira los siete videos comerciales y descubre soluciones configurables según las necesidades de cada negocio.</p><div class="lab-stats"><span><strong>06</strong> soluciones destacadas</span><span><strong>07</strong> videos disponibles · <strong>01</strong> objetivo: transformar tu operación</span></div><div class="lab-filters" role="group" aria-label="Filtrar soluciones"><button type="button" class="lab-filter" data-filter="todos" aria-pressed="true">Todos</button><button type="button" class="lab-filter" data-filter="ventas" aria-pressed="false">Ventas</button><button type="button" class="lab-filter" data-filter="inventario" aria-pressed="false">Inventario</button><button type="button" class="lab-filter" data-filter="contabilidad" aria-pressed="false">Contabilidad</button><button type="button" class="lab-filter" data-filter="legal" aria-pressed="false">Legal</button><button type="button" class="lab-filter" data-filter="operaciones" aria-pressed="false">Operaciones</button></div><div class="lab-grid"><article class="lab-card" data-category="legal"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">⚖</div>
-</div><div class="lab-body"><span class="lab-type">Gestión legal</span><h3>LegalOps Pro</h3><p>Clientes, casos, documentos y vencimientos.</p><div class="lab-tags">Expedientes · Tareas · Calendario</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="legalops" aria-label="Ver presentación de LegalOps">▶ Ver video</button><a class="lab-action main" href="soluciones/legalops/" aria-label="Conocer detalles de LegalOps">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="ventas"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▤</div></div><div class="lab-body"><span class="lab-type">Cotización y ventas</span><h3>QuoteFlow Pro</h3><p>Cotizaciones, facturación, inventario y cobros. Demo real en una ferretería; adaptable a otros comercios.</p><div class="lab-tags">Cotizaciones · Facturas · Reportes</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="quoteflow" aria-label="Reproducir video comercial QuoteFlow Pro">▶ Ver video</button><a class="lab-action main" href="soluciones/quoteflow/" aria-label="Conocer QuoteFlow Pro">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">🚘</div></div><div class="lab-body"><span class="lab-type">Dealers de autos</span><h3>AutoSales Pro</h3><p>Inventario de unidades, costos acumulados, ventas y márgenes.</p><div class="lab-tags">Vehículos · Costos · Rentabilidad</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="autosales" aria-label="Ver presentación de AutoSales Pro">▶ Ver video</button><a class="lab-action main" href="soluciones/autosales/" aria-label="Conocer detalles de AutoSales Pro">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="inventario"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">▦</div></div><div class="lab-body"><span class="lab-type">Comercio e inventario</span><h3>RetailControl Pro</h3><p>Compras, proveedores, existencias y alertas de reposición.</p><div class="lab-tags">Inventario · Alertas · Compras</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="retail" aria-label="Ver presentación de RetailControl">▶ Ver video</button><a class="lab-action main" href="soluciones/retail/" aria-label="Conocer detalles de RetailControl">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="contabilidad"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">≋</div></div><div class="lab-body"><span class="lab-type">Contabilidad y control</span><h3>ReconciliationHub Pro</h3><p>Cierres diarios, diferencias, aprobaciones e historial auditable.</p><div class="lab-tags">Cuadres · Validación · Auditoría</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="reconciliation" aria-label="Ver presentación de ReconciliationHub">▶ Ver video</button><a class="lab-action main" href="soluciones/reconciliation/" aria-label="Conocer detalles de ReconciliationHub">Conocer más ↗</a></div></div></article><article class="lab-card" data-category="operaciones"><div class="lab-art"><span class="lab-code">AIPROPS / SOLUTIONS LAB</span><div class="lab-mark" aria-hidden="true">◈</div></div><div class="lab-body"><span class="lab-type">Operación empresarial</span><h3>Business ERP Pro</h3><p>Clientes, cotizaciones, facturas, inventario e indicadores.</p><div class="lab-tags">Operaciones · Finanzas · Reportes</div><div class="lab-actions"><button type="button" class="lab-action" data-demo="erp" aria-label="Ver presentación de Business ERP">▶ Ver video</button><a class="lab-action main" href="soluciones/erp/" aria-label="Conocer detalles de Business ERP">Conocer más ↗</a></div></div></article></div><p class="lab-note">Las tarjetas muestran conceptos de sistemas personalizables. Los videos muestran prototipos funcionales de demostración, con datos ficticios. Cada implementación empresarial se diseña y valida según sus requerimientos.</p></div></section>
-<dialog class="lab-video-dialog" id="labVideoDialog" aria-labelledby="labDialogTitle"><div class="lab-dialog-content"><div class="lab-dialog-top"><h2 class="lab-dialog-title" id="labDialogTitle">Demostración</h2><button type="button" class="lab-dialog-close" id="labDialogClose" aria-label="Cerrar demostración">✕ Cerrar</button></div><div id="labVideoHolder"></div><p class="lab-dialog-copy" id="labDialogCopy"></p><a class="lab-dialog-cta" href="#agenda" id="labDialogCta">Solicitar información →</a></div></dialog>
-
     <section id="proceso">
       <div class="container process-grid">
 
@@ -1183,83 +1250,7 @@
       </div>
     </section>
 
-    <section id="agenda" class="agenda-section">
-      <div class="container">
-        <div class="agenda-box">
 
-          <div class="agenda-top">
-            <div>
-              <div class="kicker">Cuéntanos sobre tu proyecto</div>
-              <h2 class="section-title">Solicita una evaluación personalizada</h2>
-              <p>
-                En una llamada de 30 minutos evaluamos qué procesos puedes automatizar,
-                qué sistema necesita tu empresa y qué solución puede darte más control,
-                eficiencia y crecimiento.
-              </p>
-            </div>
-
-            <a class="btn btn-secondary" href="https://wa.me/17874788885" target="_blank" rel="noopener">
-              Prefiero WhatsApp
-            </a>
-          </div>
-
-          <div class="contact-strip">
-            <a href="tel:+17874788885" class="contact-card">
-              <span>📞</span>
-              <div>
-                <small>Llámanos</small>
-                <strong>787-478-8885</strong>
-              </div>
-            </a>
-
-            <a href="mailto:soluciones@aiprops.online" class="contact-card">
-              <span>✉️</span>
-              <div>
-                <small>Email</small>
-                <strong>soluciones@aiprops.online</strong>
-              </div>
-            </a>
-
-            <a href="https://wa.me/17874788885" target="_blank" rel="noopener" class="contact-card">
-              <span>💬</span>
-              <div>
-                <small>WhatsApp</small>
-                <strong>Escríbenos directo</strong>
-              </div>
-            </a>
-          </div>
-
-          <div class="lead-panel">
-            <div class="lead-heading"><span class="lead-badge">01 · Cuéntanos sobre tu empresa</span><h3>Hablemos de lo que necesitas</h3><p>Completa este formulario y recibirás una confirmación por correo. Luego, si deseas, puedes escoger una fecha disponible para reunirnos.</p></div>
-            <form id="aipropsLeadForm" class="lead-form" novalidate>
-              <div class="lead-honeypot" aria-hidden="true"><label>Sitio web<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
-              <label>Nombre y apellido *<input name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Tu nombre completo"></label>
-              <label>Correo electrónico *<input name="email" type="email" autocomplete="email" required maxlength="180" placeholder="nombre@empresa.com"></label>
-              <label>Teléfono / WhatsApp *<input name="phone" type="tel" autocomplete="tel" required maxlength="35" placeholder="787-000-0000"></label>
-              <label>Empresa o negocio *<input name="business" type="text" required maxlength="150" placeholder="Nombre de tu negocio"></label>
-              <label>Industria *<select name="industry" required><option value="">Selecciona una industria</option><option>Comercio / ventas</option><option>Distribución / suplidores</option><option>Dealer / automotriz</option><option>Oficina legal / servicios profesionales</option><option>Restaurantes / alimentos</option><option>Construcción / contratistas</option><option>Salud / bienestar</option><option>Contabilidad / finanzas</option><option>Otra industria</option></select></label>
-              <label>Solución de interés *<select name="solution" id="leadSolution" required><option value="">Selecciona una solución</option><option>QuoteFlow Pro</option><option>AutoSales Pro</option><option>LegalOps Pro</option><option>RetailControl Pro</option><option>ReconciliationHub Pro</option><option>Business ERP Pro</option><option>Automatización personalizada</option><option>Sistema a la medida / todavía no estoy seguro</option></select></label>
-              <label class="lead-full">¿Qué proceso quieres mejorar o qué problema necesitas resolver? *<textarea name="challenge" rows="4" required minlength="15" maxlength="2000" placeholder="Cuéntanos brevemente cómo trabajas hoy, qué te toma tiempo y qué quisieras automatizar..."></textarea></label>
-              <label class="lead-full">¿Qué herramientas utilizas actualmente?<input name="tools" maxlength="250" placeholder="Excel, sistema actual, papel, Microsoft 365, etc. (opcional)"></label>
-              <label>¿Cuándo te gustaría comenzar?<select name="timeline"><option value="">Selecciona (opcional)</option><option>Lo antes posible</option><option>Dentro de 30 días</option><option>En 1 a 3 meses</option><option>Solo estoy explorando</option></select></label>
-              <label>Preferencia de contacto<select name="contactPreference"><option>Correo electrónico</option><option>WhatsApp / llamada</option><option>Reunión por Calendly</option></select></label>
-              <label class="lead-full lead-consent"><input type="checkbox" name="consent" required><span>Autorizo a AIProps a utilizar esta información para responder a mi solicitud y coordinar una evaluación. He leído la <a href="politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a>. *</span></label>
-              <div class="lead-full lead-actions"><button type="submit" class="btn btn-primary" id="leadSubmitBtn">Enviar solicitud →</button><span id="leadStatus" role="status" aria-live="polite"></span></div>
-            </form>
-          </div>
-          <div id="leadSuccess" class="lead-success" hidden tabindex="-1">
-            <span class="lead-badge">02 · Solicitud recibida</span><h3>¡Gracias por comunicarte con AIProps!</h3>
-            <p id="leadSuccessCopy">Te enviamos una confirmación por correo. Revisaremos tu solicitud para comunicarnos contigo.</p>
-            <p><strong>¿Prefieres elegir una fecha de una vez?</strong> Puedes ver nuestra disponibilidad y seleccionar un espacio. No necesitas volver a escribir tus datos.</p>
-            <button type="button" class="btn btn-primary" id="openCalendly">Ver fechas disponibles →</button>
-            <a class="lead-secondary" id="calendlyFallback" href="https://calendly.com/aiprops/30min" target="_blank" rel="noopener">Abrir Calendly en otra pestaña ↗</a>
-            <div id="calendlyAfterLead" class="lead-calendar" hidden></div>
-            <p class="lead-footnote">La solicitud no reserva una cita automáticamente. Una reunión queda confirmada solo cuando completas la selección en Calendly.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
 
   </main>
 
@@ -1285,6 +1276,8 @@
       </div>
     </div>
   </footer>
+
+  <a class="mobile-convert-cta" href="#agenda"><span>Solicitar evaluación →</span></a>
 
   <a
     class="floating-whatsapp"
@@ -1358,6 +1351,14 @@
   const qs=new URLSearchParams(location.search);if(map[qs.get('solution')])$('leadSolution').value=map[qs.get('solution')];
   document.querySelectorAll('.lab-card .lab-action.main').forEach(a=>{const slug=(a.getAttribute('href').split('/').filter(Boolean).pop());if(map[slug])a.href=a.href;});
   document.querySelectorAll('[data-demo]').forEach(button=>button.addEventListener('click',()=>{if(map[button.dataset.demo])$('leadSolution').value=map[button.dataset.demo]}));
+  document.querySelectorAll('.need-choice').forEach(button=>button.addEventListener('click',()=>{
+    document.querySelectorAll('.need-choice').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    $('leadNeed').value=button.dataset.need;
+    document.getElementById('leadPanel').scrollIntoView({behavior:'smooth',block:'center'});
+  }));
+
+  const sticky=document.querySelector('.mobile-convert-cta');
+  if(sticky && 'IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{sticky.hidden=entries[0].isIntersecting;},{threshold:0.12});observer.observe(document.getElementById('agenda'));}
   form.addEventListener('submit',async(event)=>{
     event.preventDefault();const status=$('leadStatus');if(!form.reportValidity())return;
     const data=Object.fromEntries(new FormData(form).entries());if(data.consent!=='on'){status.textContent='Debes autorizar el contacto.';return}
